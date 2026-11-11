@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 19:56:01",
+ "ts": "2026-11-11 19:57:05",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,8 +9,8 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 0,
-  "uptime": "5h43m59s",
+  "cpu": 1,
+  "uptime": "5h45m3s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 2.03,
-  "up_mbps": 5.68,
+  "down_mbps": 1.96,
+  "up_mbps": 5.65,
   "leases_bound": 34,
   "clients": 26,
   "infra": 8,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 28606,
+   "uptime": 28687,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -98,8 +98,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.3,
-   "mem": 47.7,
+   "cpu": 3.2,
+   "mem": 47.8,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 21148,
+   "uptime": 21221,
    "clients": 4,
    "channel": 44,
    "bw": 20,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.1,
-   "mem": 48.3,
-   "airtime": 7,
+   "cpu": 4.3,
+   "mem": 48.4,
+   "airtime": 8,
    "self_use": 1,
-   "interference": 6,
-   "tx_retry": 4.0,
+   "interference": 7,
+   "tx_retry": 3.2,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 9,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 19317,
+   "uptime": 19407,
    "clients": 0,
    "channel": 132,
    "bw": 20,
@@ -194,7 +194,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.7,
+   "cpu": 1.5,
    "mem": 47.0,
    "airtime": 3,
    "self_use": 1,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 28466,
+   "uptime": 28553,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,11 +258,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.7,
+   "cpu": 4.1,
    "mem": 48.0,
-   "airtime": 3,
+   "airtime": 2,
    "self_use": 1,
-   "interference": 2,
+   "interference": 1,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": "8 poe",
@@ -275,11 +275,11 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.241",
-   "weak": 2,
+   "weak": 0,
    "slow": 1,
-   "weakest": -92,
-   "uptime": 19206,
-   "clients": 3,
+   "weakest": null,
+   "uptime": 19295,
+   "clients": 2,
    "channel": 165,
    "bw": 20,
    "dfs": false,
@@ -292,10 +292,10 @@
    "min_rssi": null,
    "cpu": 6.0,
    "mem": 47.8,
-   "airtime": 12,
-   "self_use": 10,
+   "airtime": 11,
+   "self_use": 9,
    "interference": 2,
-   "tx_retry": 10.2,
+   "tx_retry": 9.5,
    "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 12,
@@ -343,7 +343,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 7.3
     },
     {
      "idx": 10,
@@ -361,7 +361,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.6
+     "poe_w": 7.7
     },
     {
      "idx": 13,
@@ -370,7 +370,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.8
+     "poe_w": 7.6
     },
     {
      "idx": 15,
@@ -379,7 +379,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.3
     },
     {
      "idx": 16,
@@ -388,7 +388,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 7.6
     }
    ]
   },
@@ -399,10 +399,10 @@
    "model": "Alta S8-POE · 3/8 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 14.7,
+   "poe_used": 14.9,
    "poe_budget": 60.0,
    "poe_budget_est": false,
-   "poe_pct": 24.5,
+   "poe_pct": 24.8,
    "temp": 36.2,
    "ports": [
     {
@@ -421,7 +421,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.7
     },
     {
      "idx": 8,
@@ -442,49 +442,11 @@
   "spares": 0,
   "switches": 2,
   "switches_online": 2,
-  "clients": 10,
+  "clients": 9,
   "crit": 0,
   "warn": 0
  },
  "history": [
-  {
-   "ts": "17:23",
-   "clients": 6,
-   "ap": {
-    "10": {
-     "air": 8,
-     "retry": 33.3
-    },
-    "2": {
-     "air": 1,
-     "retry": 0.0
-    },
-    "4": {
-     "air": 4,
-     "retry": 0.0
-    },
-    "5": {
-     "air": 13,
-     "retry": 5.3
-    },
-    "6": {
-     "air": 26,
-     "retry": 0.0
-    },
-    "7": {
-     "air": 10,
-     "retry": 0.0
-    },
-    "8": {
-     "air": 2,
-     "retry": 0.0
-    },
-    "9": {
-     "air": 11,
-     "retry": 11.9
-    }
-   }
-  },
   {
    "ts": "17:24",
    "clients": 6,
@@ -5916,6 +5878,44 @@
     "9": {
      "air": 12,
      "retry": 10.2
+    }
+   }
+  },
+  {
+   "ts": "19:57",
+   "clients": 9,
+   "ap": {
+    "10": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 51.1
+    },
+    "5": {
+     "air": 8,
+     "retry": 3.2
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 6,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 11,
+     "retry": 9.5
     }
    }
   }
