@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 16:32:08",
+ "ts": "2026-11-11 16:33:13",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,8 +9,8 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 2,
-  "uptime": "2h20m6s",
+  "cpu": 0,
+  "uptime": "2h21m12s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 44.87,
-  "up_mbps": 0.99,
+  "down_mbps": 23.38,
+  "up_mbps": 0.61,
   "leases_bound": 25,
   "clients": 17,
   "infra": 8,
@@ -51,11 +51,11 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.246",
-   "weak": 1,
+   "weak": 0,
    "slow": 0,
-   "weakest": -80,
-   "uptime": 8886,
-   "clients": 1,
+   "weakest": null,
+   "uptime": 8960,
+   "clients": 0,
    "channel": 149,
    "bw": 20,
    "dfs": false,
@@ -66,11 +66,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.4,
+   "cpu": 4.2,
    "mem": 47.1,
-   "airtime": 8,
+   "airtime": 9,
    "self_use": 1,
-   "interference": 7,
+   "interference": 8,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 16349,
+   "uptime": 16426,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -98,7 +98,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.1,
+   "cpu": 3.0,
    "mem": 47.7,
    "airtime": 1,
    "self_use": 1,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8948,
+   "uptime": 9030,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,7 +130,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.1,
+   "cpu": 1.2,
    "mem": 47.0,
    "airtime": 2,
    "self_use": 1,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8916,
+   "uptime": 8990,
    "clients": 2,
    "channel": 44,
    "bw": 20,
@@ -162,11 +162,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.8,
+   "cpu": 3.7,
    "mem": 47.6,
-   "airtime": 14,
-   "self_use": 2,
-   "interference": 12,
+   "airtime": 12,
+   "self_use": 1,
+   "interference": 11,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -212,10 +212,10 @@
    "radio": "wifi1",
    "ip": "192.168.88.240",
    "weak": 1,
-   "slow": 0,
-   "weakest": -80,
-   "uptime": 7028,
-   "clients": 2,
+   "slow": 1,
+   "weakest": -78,
+   "uptime": 7103,
+   "clients": 1,
    "channel": 157,
    "bw": 20,
    "dfs": false,
@@ -226,11 +226,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.0,
+   "cpu": 3.8,
    "mem": 47.2,
-   "airtime": 6,
-   "self_use": 2,
-   "interference": 4,
+   "airtime": 4,
+   "self_use": 1,
+   "interference": 3,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 16224,
+   "uptime": 16291,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,7 +258,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.5,
+   "cpu": 3.3,
    "mem": 47.9,
    "airtime": 1,
    "self_use": 1,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 6974,
+   "uptime": 7053,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.0,
-   "mem": 47.2,
-   "airtime": 2,
-   "self_use": 1,
-   "interference": 1,
-   "tx_retry": 8.6,
+   "cpu": 5.6,
+   "mem": 47.3,
+   "airtime": 62,
+   "self_use": 58,
+   "interference": 4,
+   "tx_retry": 7.1,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -312,6 +312,13 @@
    "detail": "ch36 有外部訊號源在佔用空中時間,不是本台造成的。",
    "fix": "把 AP 6 的 5GHz 頻道從 ch36 改成 ch48(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
    "key": "AP 6 他源干擾 #%"
+  },
+  {
+   "sev": "warn",
+   "title": "AP 9 空中時間 62%(自身流量佔 58%)",
+   "detail": "3 位用戶掛在這台,58% 是自己的傳輸、只有 4% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "fix": "依序執行:1) 若仍不足,在 AP 9 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 9 → 設定 → 無線電。",
+   "key": "AP 9 空中時間 #%(自身流量佔 #%)"
   }
  ],
  "summary": {
@@ -320,9 +327,9 @@
   "spares": 0,
   "switches": 0,
   "switches_online": 0,
-  "clients": 8,
+  "clients": 6,
   "crit": 0,
-  "warn": 1
+  "warn": 2
  },
  "history": [
   {
@@ -2526,6 +2533,44 @@
     "9": {
      "air": 2,
      "retry": 8.6
+    }
+   }
+  },
+  {
+   "ts": "16:33",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 9,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 12,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 31,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 62,
+     "retry": 7.1
     }
    }
   }
