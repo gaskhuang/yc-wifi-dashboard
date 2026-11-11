@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 20:31:43",
+ "ts": "2026-11-11 20:33:13",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -43,38 +43,6 @@
    "up_speed": 1000
   },
   {
-   "name": "2",
-   "device": "2",
-   "virtual": false,
-   "radio": "wifi1",
-   "ip": "192.168.88.250",
-   "weak": 0,
-   "slow": 0,
-   "weakest": null,
-   "uptime": 30677,
-   "clients": 0,
-   "channel": 100,
-   "bw": 20,
-   "dfs": true,
-   "cfg_channel": 100,
-   "radio_state": "RUN",
-   "tx_power": 24,
-   "tx_power_mode": "auto",
-   "max_txpower": 26,
-   "min_rssi_on": false,
-   "min_rssi": null,
-   "cpu": 3.1,
-   "mem": 47.7,
-   "airtime": 1,
-   "self_use": 1,
-   "interference": 0,
-   "tx_retry": 0.0,
-   "retry_ok": false,
-   "up_sw": "8 poe",
-   "up_port": 2,
-   "up_speed": 1000
-  },
-  {
    "name": "4",
    "device": "4",
    "virtual": false,
@@ -104,38 +72,6 @@
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 16,
-   "up_speed": 1000
-  },
-  {
-   "name": "5",
-   "device": "5",
-   "virtual": false,
-   "radio": "wifi1",
-   "ip": "192.168.88.247",
-   "weak": 0,
-   "slow": 0,
-   "weakest": null,
-   "uptime": 23211,
-   "clients": 2,
-   "channel": 44,
-   "bw": 20,
-   "dfs": false,
-   "cfg_channel": 44,
-   "radio_state": "RUN",
-   "tx_power": 24,
-   "tx_power_mode": "auto",
-   "max_txpower": 26,
-   "min_rssi_on": false,
-   "min_rssi": null,
-   "cpu": 3.8,
-   "mem": 48.3,
-   "airtime": 8,
-   "self_use": 2,
-   "interference": 6,
-   "tx_retry": 2.2,
-   "retry_ok": false,
-   "up_sw": "24 poe",
-   "up_port": 9,
    "up_speed": 1000
   },
   {
@@ -203,38 +139,6 @@
    "up_speed": 1000
   },
   {
-   "name": "8",
-   "device": "8",
-   "virtual": false,
-   "radio": "wifi1",
-   "ip": "192.168.88.249",
-   "weak": 0,
-   "slow": 0,
-   "weakest": null,
-   "uptime": 30567,
-   "clients": 0,
-   "channel": 40,
-   "bw": 20,
-   "dfs": false,
-   "cfg_channel": 40,
-   "radio_state": "RUN",
-   "tx_power": 24,
-   "tx_power_mode": "auto",
-   "max_txpower": 26,
-   "min_rssi_on": false,
-   "min_rssi": null,
-   "cpu": 3.1,
-   "mem": 47.9,
-   "airtime": 1,
-   "self_use": 1,
-   "interference": 0,
-   "tx_retry": 0.0,
-   "retry_ok": false,
-   "up_sw": "8 poe",
-   "up_port": 1,
-   "up_speed": 1000
-  },
-  {
    "name": "9",
    "device": "9",
    "virtual": false,
@@ -267,7 +171,26 @@
    "up_speed": 1000
   }
  ],
- "offline": [],
+ "offline": [
+  {
+   "name": "2",
+   "mac": "74:f9:2c:4e:da:c8",
+   "ip": "192.168.88.250",
+   "at_venue": true
+  },
+  {
+   "name": "8",
+   "mac": "74:f9:2c:4e:f0:60",
+   "ip": "192.168.88.249",
+   "at_venue": true
+  },
+  {
+   "name": "5",
+   "mac": "8c:ed:e1:90:91:94",
+   "ip": "192.168.88.247",
+   "at_venue": true
+  }
+ ],
  "spares": [],
  "switches": [
   {
@@ -281,7 +204,7 @@
    "poe_budget": 240.0,
    "poe_budget_est": false,
    "poe_pct": 20.4,
-   "temp": 35.1,
+   "temp": null,
    "ports": [
     {
      "idx": 3,
@@ -368,7 +291,7 @@
    "poe_budget": 60.0,
    "poe_budget_est": false,
    "poe_pct": 24.5,
-   "temp": 36.2,
+   "temp": null,
    "ports": [
     {
      "idx": 1,
@@ -403,6 +326,27 @@
  "issues": [
   {
    "sev": "crit",
+   "title": "AP 2 離線",
+   "detail": "現役機 192.168.88.250(接在 8 poe 第 2 埠) 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 8 poe 第 2 埠有連線也有供電,AP 本身可能當機,到現場把網路線拔插一次讓它重開。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 2 即可套用相同設定)。",
+   "key": "AP 2 離線"
+  },
+  {
+   "sev": "crit",
+   "title": "AP 8 離線",
+   "detail": "現役機 192.168.88.249(接在 8 poe 第 1 埠) 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 8 poe 第 1 埠有連線也有供電,AP 本身可能當機,到現場把網路線拔插一次讓它重開。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 8 即可套用相同設定)。",
+   "key": "AP 8 離線"
+  },
+  {
+   "sev": "crit",
+   "title": "AP 5 離線",
+   "detail": "現役機 192.168.88.247(接在 24 poe 第 9 埠) 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 24 poe 第 9 埠有連線也有供電,AP 本身可能當機,到現場把網路線拔插一次讓它重開。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 5 即可套用相同設定)。",
+   "key": "AP 5 離線"
+  },
+  {
+   "sev": "crit",
    "title": "MikroTik RB5009 無法連線",
    "detail": "路由器 REST API 沒有回應,DHCP 與對外頻寬狀態無法取得。",
    "fix": "確認路由器是否斷電、對外線路是否中斷。若現場網路正常,多半是 DDNS 還沒更新到新位址:在 RB5009 上執行 /ip cloud force-update。",
@@ -417,54 +361,16 @@
   }
  ],
  "summary": {
-  "online": 8,
-  "offline": 0,
+  "online": 5,
+  "offline": 3,
   "spares": 0,
   "switches": 2,
   "switches_online": 2,
-  "clients": 11,
-  "crit": 1,
+  "clients": 9,
+  "crit": 4,
   "warn": 1
  },
  "history": [
-  {
-   "ts": "17:57",
-   "clients": 6,
-   "ap": {
-    "10": {
-     "air": 14,
-     "retry": 0.0
-    },
-    "2": {
-     "air": 1,
-     "retry": 0.0
-    },
-    "4": {
-     "air": 2,
-     "retry": 0.0
-    },
-    "5": {
-     "air": 11,
-     "retry": 0.0
-    },
-    "6": {
-     "air": 26,
-     "retry": 0.0
-    },
-    "7": {
-     "air": 5,
-     "retry": 0.0
-    },
-    "8": {
-     "air": 3,
-     "retry": 0.0
-    },
-    "9": {
-     "air": 13,
-     "retry": 11.1
-    }
-   }
-  },
   {
    "ts": "17:58",
    "clients": 6,
@@ -5891,6 +5797,32 @@
     },
     "8": {
      "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 1,
+     "retry": 0.0
+    }
+   }
+  },
+  {
+   "ts": "20:33",
+   "clients": 9,
+   "ap": {
+    "10": {
+     "air": 4,
+     "retry": 15.5
+    },
+    "4": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 2,
      "retry": 0.0
     },
     "9": {
