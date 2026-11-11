@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 17:36:52",
+ "ts": "2026-11-11 17:38:03",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,7 +10,7 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 0,
-  "uptime": "3h24m51s",
+  "uptime": "3h26m1s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 1.4,
-  "up_mbps": 5.32,
+  "down_mbps": 1.58,
+  "up_mbps": 5.39,
   "leases_bound": 28,
   "clients": 20,
   "infra": 8,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 12735,
+   "uptime": 12816,
    "clients": 0,
    "channel": 149,
    "bw": 20,
@@ -66,7 +66,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.7,
+   "cpu": 3.6,
    "mem": 47.3,
    "airtime": 11,
    "self_use": 1,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 20206,
+   "uptime": 20295,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 12846,
+   "uptime": 12980,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,11 +130,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.7,
-   "mem": 47.1,
-   "airtime": 5,
-   "self_use": 1,
-   "interference": 4,
+   "cpu": 1.0,
+   "mem": 47.2,
+   "airtime": 2,
+   "self_use": 2,
+   "interference": 0,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 12736,
+   "uptime": 12825,
    "clients": 2,
    "channel": 44,
    "bw": 20,
@@ -164,10 +164,10 @@
    "min_rssi": null,
    "cpu": 3.8,
    "mem": 47.7,
-   "airtime": 11,
+   "airtime": 10,
    "self_use": 1,
-   "interference": 10,
-   "tx_retry": 11.3,
+   "interference": 9,
+   "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 11016,
+   "uptime": 11104,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -194,11 +194,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.5,
-   "mem": 46.8,
-   "airtime": 30,
-   "self_use": 2,
-   "interference": 28,
+   "cpu": 1.4,
+   "mem": 46.9,
+   "airtime": 43,
+   "self_use": 1,
+   "interference": 42,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10878,
+   "uptime": 10949,
    "clients": 1,
    "channel": 157,
    "bw": 20,
@@ -226,12 +226,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
-   "mem": 47.5,
-   "airtime": 7,
+   "cpu": 3.6,
+   "mem": 47.6,
+   "airtime": 5,
    "self_use": 1,
-   "interference": 6,
-   "tx_retry": 15.8,
+   "interference": 4,
+   "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 20090,
+   "uptime": 20158,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,8 +258,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.5,
-   "mem": 47.8,
+   "cpu": 3.8,
+   "mem": 47.9,
    "airtime": 2,
    "self_use": 1,
    "interference": 1,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10880,
+   "uptime": 10952,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.9,
-   "mem": 47.5,
-   "airtime": 11,
-   "self_use": 10,
-   "interference": 1,
-   "tx_retry": 11.0,
+   "cpu": 5.6,
+   "mem": 47.4,
+   "airtime": 10,
+   "self_use": 8,
+   "interference": 2,
+   "tx_retry": 11.3,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -307,8 +307,8 @@
  "switches": [],
  "issues": [
   {
-   "sev": "warn",
-   "title": "AP 6 他源干擾 28%",
+   "sev": "crit",
+   "title": "AP 6 他源干擾 42%",
    "detail": "ch36 有外部訊號源在佔用空中時間,不是本台造成的。",
    "fix": "把 AP 6 的 5GHz 頻道從 ch36 改成 ch48(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
    "key": "AP 6 他源干擾 #%"
@@ -321,8 +321,8 @@
   "switches": 0,
   "switches_online": 0,
   "clients": 6,
-  "crit": 0,
-  "warn": 1
+  "crit": 1,
+  "warn": 0
  },
  "history": [
   {
@@ -4806,6 +4806,44 @@
     "9": {
      "air": 11,
      "retry": 11.0
+    }
+   }
+  },
+  {
+   "ts": "17:38",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 11,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 43,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 5,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 10,
+     "retry": 11.3
     }
    }
   }
