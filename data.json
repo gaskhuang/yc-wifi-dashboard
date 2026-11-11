@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 17:01:15",
+ "ts": "2026-11-11 17:02:20",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,8 +9,8 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 1,
-  "uptime": "2h49m14s",
+  "cpu": 0,
+  "uptime": "2h50m18s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,14 +32,14 @@
     "active": false
    }
   ],
-  "down_mbps": 74.78,
-  "up_mbps": 1.29,
-  "leases_bound": 25,
-  "clients": 17,
+  "down_mbps": 1.16,
+  "up_mbps": 0.22,
+  "leases_bound": 28,
+  "clients": 20,
   "infra": 8,
   "pool_range": "192.168.88.10-192.168.91.254",
   "pool_capacity": 1013,
-  "pool_used_pct": 2.5
+  "pool_used_pct": 2.8
  },
  "crs": null,
  "mt_configured": true,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 18125,
+   "uptime": 18209,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -98,7 +98,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
+   "cpu": 3.1,
    "mem": 47.7,
    "airtime": 1,
    "self_use": 1,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10705,
+   "uptime": 10786,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,11 +130,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.0,
+   "cpu": 1.1,
    "mem": 47.1,
-   "airtime": 6,
-   "self_use": 3,
-   "interference": 3,
+   "airtime": 4,
+   "self_use": 2,
+   "interference": 2,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10650,
+   "uptime": 10734,
    "clients": 2,
    "channel": 44,
    "bw": 20,
@@ -163,11 +163,11 @@
    "min_rssi_on": false,
    "min_rssi": null,
    "cpu": 4.1,
-   "mem": 47.6,
-   "airtime": 10,
+   "mem": 47.8,
+   "airtime": 9,
    "self_use": 1,
-   "interference": 9,
-   "tx_retry": 6.3,
+   "interference": 8,
+   "tx_retry": 5.7,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8865,
+   "uptime": 8939,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -194,11 +194,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.5,
+   "cpu": 1.4,
    "mem": 46.8,
-   "airtime": 26,
+   "airtime": 24,
    "self_use": 1,
-   "interference": 25,
+   "interference": 23,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8759,
+   "uptime": 8834,
    "clients": 0,
    "channel": 157,
    "bw": 20,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 17964,
+   "uptime": 18047,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,8 +258,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
-   "mem": 47.8,
+   "cpu": 3.4,
+   "mem": 47.7,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8768,
+   "uptime": 8856,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 12.1,
+   "cpu": 11.5,
    "mem": 47.2,
-   "airtime": 88,
-   "self_use": 88,
+   "airtime": 2,
+   "self_use": 2,
    "interference": 0,
-   "tx_retry": 9.9,
+   "tx_retry": 9.7,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -305,22 +305,7 @@
  "offline": [],
  "spares": [],
  "switches": [],
- "issues": [
-  {
-   "sev": "crit",
-   "title": "AP 9 空中時間 88%(自身流量佔 88%)",
-   "detail": "3 位用戶掛在這台,88% 是自己的傳輸、只有 0% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
-   "fix": "依序執行:1) 若仍不足,在 AP 9 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 9 → 設定 → 無線電。",
-   "key": "AP 9 空中時間 #%(自身流量佔 #%)"
-  },
-  {
-   "sev": "warn",
-   "title": "AP 6 他源干擾 25%",
-   "detail": "ch36 有外部訊號源在佔用空中時間,不是本台造成的。",
-   "fix": "把 AP 6 的 5GHz 頻道從 ch36 改成 ch48(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
-   "key": "AP 6 他源干擾 #%"
-  }
- ],
+ "issues": [],
  "summary": {
   "online": 8,
   "offline": 0,
@@ -328,8 +313,8 @@
   "switches": 0,
   "switches_online": 0,
   "clients": 6,
-  "crit": 1,
-  "warn": 1
+  "crit": 0,
+  "warn": 0
  },
  "history": [
   {
@@ -3559,6 +3544,44 @@
     "9": {
      "air": 88,
      "retry": 9.9
+    }
+   }
+  },
+  {
+   "ts": "17:02",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 9,
+     "retry": 5.7
+    },
+    "6": {
+     "air": 24,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 2,
+     "retry": 9.7
     }
    }
   }
