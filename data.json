@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 17:47:46",
+ "ts": "2026-11-11 17:48:51",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,8 +9,8 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 0,
-  "uptime": "3h35m45s",
+  "cpu": 1,
+  "uptime": "3h36m50s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,14 +32,14 @@
     "active": false
    }
   ],
-  "down_mbps": 35.55,
-  "up_mbps": 5.4,
-  "leases_bound": 25,
-  "clients": 17,
+  "down_mbps": 77.46,
+  "up_mbps": 5.49,
+  "leases_bound": 24,
+  "clients": 16,
   "infra": 8,
   "pool_range": "192.168.88.10-192.168.91.254",
   "pool_capacity": 1013,
-  "pool_used_pct": 2.5
+  "pool_used_pct": 2.4
  },
  "crs": null,
  "mt_configured": true,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 1,
    "weakest": null,
-   "uptime": 13446,
+   "uptime": 13522,
    "clients": 1,
    "channel": 149,
    "bw": 20,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 20916,
+   "uptime": 20983,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -98,8 +98,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
-   "mem": 47.6,
+   "cpu": 3.3,
+   "mem": 47.7,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -119,7 +119,7 @@
    "slow": 1,
    "weakest": null,
    "uptime": 13565,
-   "clients": 1,
+   "clients": 0,
    "channel": 64,
    "bw": 20,
    "dfs": true,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 13402,
+   "uptime": 13473,
    "clients": 1,
    "channel": 44,
    "bw": 20,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.9,
+   "cpu": 4.0,
    "mem": 47.8,
-   "airtime": 14,
+   "airtime": 10,
    "self_use": 1,
-   "interference": 13,
-   "tx_retry": 0.0,
+   "interference": 9,
+   "tx_retry": 2.0,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 11651,
+   "uptime": 11727,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -194,11 +194,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.5,
+   "cpu": 1.4,
    "mem": 46.9,
-   "airtime": 26,
+   "airtime": 27,
    "self_use": 1,
-   "interference": 25,
+   "interference": 26,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 1,
    "weakest": null,
-   "uptime": 11534,
+   "uptime": 11620,
    "clients": 1,
    "channel": 157,
    "bw": 20,
@@ -226,11 +226,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.5,
+   "cpu": 4.0,
    "mem": 47.5,
-   "airtime": 4,
+   "airtime": 5,
    "self_use": 1,
-   "interference": 3,
+   "interference": 4,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 11555,
+   "uptime": 11637,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.7,
-   "mem": 47.5,
-   "airtime": 13,
-   "self_use": 11,
-   "interference": 2,
-   "tx_retry": 12.2,
+   "cpu": 8.8,
+   "mem": 47.4,
+   "airtime": 74,
+   "self_use": 73,
+   "interference": 1,
+   "tx_retry": 11.4,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -307,8 +307,15 @@
  "switches": [],
  "issues": [
   {
+   "sev": "crit",
+   "title": "AP 9 空中時間 74%(自身流量佔 73%)",
+   "detail": "3 位用戶掛在這台,73% 是自己的傳輸、只有 1% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "fix": "依序執行:1) 若仍不足,在 AP 9 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 9 → 設定 → 無線電。",
+   "key": "AP 9 空中時間 #%(自身流量佔 #%)"
+  },
+  {
    "sev": "warn",
-   "title": "AP 6 他源干擾 25%",
+   "title": "AP 6 他源干擾 26%",
    "detail": "ch36 有外部訊號源在佔用空中時間,不是本台造成的。",
    "fix": "把 AP 6 的 5GHz 頻道從 ch36 改成 ch48(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
    "key": "AP 6 他源干擾 #%"
@@ -320,8 +327,8 @@
   "spares": 0,
   "switches": 0,
   "switches_online": 0,
-  "clients": 7,
-  "crit": 0,
+  "clients": 6,
+  "crit": 1,
   "warn": 1
  },
  "history": [
@@ -5186,6 +5193,44 @@
     "9": {
      "air": 13,
      "retry": 12.2
+    }
+   }
+  },
+  {
+   "ts": "17:48",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 11,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 7,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 10,
+     "retry": 2.0
+    },
+    "6": {
+     "air": 27,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 5,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 74,
+     "retry": 11.4
     }
    }
   }
