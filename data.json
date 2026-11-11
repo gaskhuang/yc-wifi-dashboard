@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 16:44:00",
+ "ts": "2026-11-11 16:45:05",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,8 +10,8 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 0,
-  "uptime": "2h31m59s",
-  "cpu_temp": 34,
+  "uptime": "2h33m4s",
+  "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
   "wan_running": true,
@@ -32,7 +32,7 @@
     "active": false
    }
   ],
-  "down_mbps": 2.08,
+  "down_mbps": 4.03,
   "up_mbps": 0.21,
   "leases_bound": 25,
   "clients": 17,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 9637,
+   "uptime": 9701,
    "clients": 0,
    "channel": 149,
    "bw": 20,
@@ -68,9 +68,9 @@
    "min_rssi": null,
    "cpu": 3.9,
    "mem": 47.1,
-   "airtime": 8,
+   "airtime": 10,
    "self_use": 1,
-   "interference": 7,
+   "interference": 9,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 17061,
+   "uptime": 17132,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 9675,
+   "uptime": 9743,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,11 +130,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.1,
-   "mem": 46.9,
-   "airtime": 3,
+   "cpu": 1.2,
+   "mem": 47.0,
+   "airtime": 2,
    "self_use": 1,
-   "interference": 2,
+   "interference": 1,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7821,
+   "uptime": 7902,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -194,7 +194,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.3,
+   "cpu": 1.4,
    "mem": 46.8,
    "airtime": 26,
    "self_use": 1,
@@ -213,8 +213,8 @@
    "ip": "192.168.88.240",
    "weak": 1,
    "slow": 0,
-   "weakest": -79,
-   "uptime": 7708,
+   "weakest": -78,
+   "uptime": 7783,
    "clients": 1,
    "channel": 157,
    "bw": 20,
@@ -226,11 +226,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.7,
-   "mem": 47.3,
-   "airtime": 6,
+   "cpu": 3.5,
+   "mem": 47.4,
+   "airtime": 5,
    "self_use": 1,
-   "interference": 5,
+   "interference": 4,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 16927,
+   "uptime": 16995,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,7 +258,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 2.9,
+   "cpu": 3.0,
    "mem": 47.8,
    "airtime": 1,
    "self_use": 1,
@@ -278,8 +278,8 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7739,
-   "clients": 2,
+   "uptime": 7805,
+   "clients": 3,
    "channel": 165,
    "bw": 20,
    "dfs": false,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 2.9,
+   "cpu": 4.2,
    "mem": 47.2,
-   "airtime": 1,
-   "self_use": 1,
-   "interference": 0,
-   "tx_retry": 16.1,
+   "airtime": 14,
+   "self_use": 12,
+   "interference": 2,
+   "tx_retry": 7.2,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -320,7 +320,7 @@
   "spares": 0,
   "switches": 0,
   "switches_online": 0,
-  "clients": 5,
+  "clients": 6,
   "crit": 0,
   "warn": 1
  },
@@ -2944,6 +2944,44 @@
     "9": {
      "air": 1,
      "retry": 16.1
+    }
+   }
+  },
+  {
+   "ts": "16:45",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 14,
+     "retry": 3.6
+    },
+    "6": {
+     "air": 26,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 5,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 14,
+     "retry": 7.2
     }
    }
   }
