@@ -1,0 +1,619 @@
+<title>YC 松菸網路戰情室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F5F6F8; --panel:#FFFFFF; --line:#E1E4EA; --line2:#EDEFF3;
+  --ink:#1B1F27; --ink2:#5A6273; --ink3:#8B93A3;
+  --accent:#4B4FA6;
+  --ok:#2E8B62; --warn:#C07A16; --crit:#C0392F; --info:#4B6EA9;
+  --okbg:#E8F3ED; --warnbg:#FBF1DE; --critbg:#FBEAE8;
+  --track:#E7EAEF;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101319; --panel:#171B23; --line:#262C37; --line2:#1F242D;
+    --ink:#E7EAF0; --ink2:#A2AAB9; --ink3:#6D7686;
+    --accent:#8E93E8;
+    --ok:#4FBE8B; --warn:#E0A63F; --crit:#E86B60; --info:#7CA0DC;
+    --okbg:#16281F; --warnbg:#2C2415; --critbg:#301B19;
+    --track:#242A34;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101319; --panel:#171B23; --line:#262C37; --line2:#1F242D;
+  --ink:#E7EAF0; --ink2:#A2AAB9; --ink3:#6D7686;
+  --accent:#8E93E8;
+  --ok:#4FBE8B; --warn:#E0A63F; --crit:#E86B60; --info:#7CA0DC;
+  --okbg:#16281F; --warnbg:#2C2415; --critbg:#301B19;
+  --track:#242A34;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans","Noto Sans TC",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 64px}
+.mono,.m-val,.facts dd,.spark-empty{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-variant-numeric:tabular-nums}
+
+/* header */
+.top{display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;
+  padding-bottom:16px;border-bottom:1px solid var(--line)}
+.top h1{margin:0;font-size:21px;font-weight:600;letter-spacing:-.01em}
+.top .site{color:var(--ink3);font-size:13px;margin-left:10px;font-weight:400}
+.stamp{font-size:12.5px;color:var(--ink2);font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.stamp b{color:var(--ink);font-weight:500}
+
+/* verdict */
+.verdict{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:20px 0 26px;
+  padding:15px 18px;border:1px solid var(--line);border-left:4px solid var(--ink3);
+  border-radius:4px;background:var(--panel)}
+.verdict.ok{border-left-color:var(--ok);background:var(--okbg)}
+.verdict.warn{border-left-color:var(--warn);background:var(--warnbg)}
+.verdict.crit{border-left-color:var(--crit);background:var(--critbg)}
+.verdict .vtxt{font-size:16.5px;font-weight:600}
+.verdict.ok .vtxt{color:var(--ok)} .verdict.warn .vtxt{color:var(--warn)} .verdict.crit .vtxt{color:var(--crit)}
+.kpis{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
+.kpi{text-align:right}
+.kpi b{display:block;font-size:19px;font-weight:600;line-height:1.2;
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.kpi span{font-size:11px;color:var(--ink2);letter-spacing:.06em}
+
+h2{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--ink3);
+  text-transform:uppercase;margin:34px 0 14px}
+
+/* mikrotik */
+.mtgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:10px}
+.mtcard{background:var(--panel);border:1px solid var(--line);border-radius:4px;
+  padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.mtcard.wide{grid-column:1/-1}
+.mtlab{font-size:11.5px;color:var(--ink3);letter-spacing:.03em}
+.mtval{font-size:22px;font-weight:600;line-height:1.25;
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.mtval.sm{font-size:14px}
+.mtval i{font-size:12px;font-style:normal;font-weight:400;color:var(--ink3);margin-left:3px}
+.mtval.ok{color:var(--ok)} .mtval.warn{color:var(--warn)} .mtval.crit{color:var(--crit)}
+.mtsub{font-size:11.5px;color:var(--ink3);
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.mtbad{background:var(--critbg);border:1px solid var(--line);border-left:3px solid var(--crit);
+  border-radius:4px;padding:13px 16px;color:var(--crit);font-weight:500}
+
+/* issues */
+.isslist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.iss{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--ink3);
+  border-radius:4px;padding:13px 16px}
+.iss.crit{border-left-color:var(--crit)} .iss.warn{border-left-color:var(--warn)}
+.iss.info{border-left-color:var(--info)}
+.iss-h{display:flex;align-items:center;gap:10px}
+.iss-h h3{margin:0;font-size:15px;font-weight:600}
+.pill{font-size:10.5px;font-weight:600;letter-spacing:.08em;padding:2px 7px;border-radius:3px;flex:none}
+.pill.crit{background:var(--critbg);color:var(--crit)}
+.pill.warn{background:var(--warnbg);color:var(--warn)}
+.pill.info{background:var(--okbg);color:var(--info)}
+.iss-d{margin:7px 0 0;color:var(--ink2);font-size:14px}
+.iss-f{margin:7px 0 0;font-size:14px;color:var(--ink)}
+.iss-f span{font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--accent);margin-right:8px}
+.allclear{background:var(--okbg);border:1px solid var(--line);border-left:3px solid var(--ok);
+  border-radius:4px;padding:14px 16px;margin:0;color:var(--ok);font-weight:500}
+
+/* ap grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.ap{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--ok);
+  border-radius:4px;padding:14px 16px 12px}
+.ap.warn{border-top-color:var(--warn)} .ap.crit{border-top-color:var(--crit)}
+.ap-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.ap-id{font-size:12px;color:var(--ink3);letter-spacing:.06em}
+.ap-id b{font-size:19px;color:var(--ink);letter-spacing:0;
+  font-family:"IBM Plex Mono",monospace;margin-left:3px}
+.ap-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;color:var(--ink2);background:var(--line2);border:1px solid var(--line);
+  padding:2px 7px;border-radius:3px;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.tag.dfs{color:var(--warn);border-color:var(--warn)}
+
+.meters{display:grid;gap:9px}
+.m-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.m-lab{font-size:12.5px;color:var(--ink2)}
+.m-val{font-size:14px;font-weight:600}
+.m-val.ok{color:var(--ink)} .m-val.warn{color:var(--warn)} .m-val.crit{color:var(--crit)}
+.m-val.na{color:var(--ink3)}
+.m-u{font-size:11px;margin-left:1px;font-weight:400;color:var(--ink3)}
+.track{position:relative;height:5px;background:var(--track);border-radius:3px;margin-top:4px;overflow:hidden}
+.fill{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--ok)}
+.fill.warn{background:var(--warn)} .fill.crit{background:var(--crit)}
+.tick{position:absolute;top:0;bottom:0;width:1px;background:var(--panel);opacity:.85}
+.m-note{font-size:11px;color:var(--ink3);margin-top:3px;
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+
+.sparkwrap{display:flex;align-items:center;gap:10px;margin:12px 0 2px;
+  padding-top:11px;border-top:1px solid var(--line2)}
+.sp-lab{font-size:11px;color:var(--ink3);flex:none}
+.spark{width:100%;height:30px;overflow:visible}
+.sp-area{fill:var(--accent);opacity:.12}
+.sp-line{fill:none;stroke:var(--accent);stroke-width:1.5;vector-effect:non-scaling-stroke;
+  stroke-linejoin:round}
+.sp-dot{fill:var(--accent)}
+.spark-empty{font-size:11px;color:var(--ink3)}
+
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 14px;margin:11px 0 0;
+  padding-top:11px;border-top:1px solid var(--line2)}
+.facts div{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.facts dt{font-size:12px;color:var(--ink3)}
+.facts dd{margin:0;font-size:12.5px;font-weight:500}
+.facts dd.warn{color:var(--warn)} .facts dd.crit{color:var(--crit)} .facts dd.ok{color:var(--ink)}
+.facts .sub{color:var(--ink3);font-weight:400;font-size:11px}
+
+/* reference */
+.ref{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel);
+  border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.ref th,.ref td{padding:9px 13px;text-align:left;border-bottom:1px solid var(--line2)}
+.ref thead th{font-size:11px;letter-spacing:.07em;color:var(--ink3);font-weight:600;
+  background:var(--line2);text-transform:uppercase}
+.ref tbody tr:last-child td{border-bottom:none}
+.ref td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ref .g{color:var(--ok)} .ref .a{color:var(--warn)} .ref .r{color:var(--crit)}
+.scroll{overflow-x:auto}
+.ap-sub{font-size:11px;color:var(--ink3);margin-left:8px;font-weight:400}
+/* switch / poe */
+.swgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.swcard{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px 14px 6px}
+.swhead{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14.5px}
+.swst{font-size:11.5px;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.swst.ok{background:var(--okbg);color:var(--ok)} .swst.crit{background:var(--critbg);color:var(--crit)}
+.swst.info{background:var(--track);color:var(--info)}
+.swmeta{font-size:11.5px;color:var(--ink3);margin:4px 0 10px}
+.swpoe{display:flex;align-items:baseline;gap:10px;font-size:12px;color:var(--ink3);margin-bottom:8px}
+.swpoe b{font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums}
+.swpoe b.warn{color:var(--warn)} .swpoe b.crit{color:var(--crit)} .swpoe b.ok{color:var(--ok)}
+.swtbl{font-size:12.5px;background:transparent}
+.swtbl th,.swtbl td{padding:6px 8px}
+
+
+.foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3);display:grid;gap:5px}
+.foot b{color:var(--ink2);font-weight:500}
+@media (max-width:560px){.kpis{margin-left:0}.wrap{padding:20px 14px 48px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+  <div class="top">
+    <h1>網路戰情室<span class="site">YC 松菸 · SSID Staff / Y Combinator</span></h1>
+    <div class="stamp">資料時間 <b>2026-11-11 15:35:02</b> · 每分鐘更新 · <span id="live">自動重新整理</span></div>
+  </div>
+
+  <div class="verdict crit">
+    <span class="vtxt">1 項需要立即處理</span>
+    <div class="kpis">
+      <div class="kpi"><b>8</b><span>線上 AP</span></div>
+      <div class="kpi"><b>4</b><span>連線用戶</span></div>
+      <div class="kpi"><b class="crit" style="color:var(--crit)">1</b><span>嚴重</span></div>
+      <div class="kpi"><b style="color:inherit">0</b><span>警告</span></div>
+      <div class="kpi"><b>0<i style="font-size:.6em;font-style:normal;opacity:.6">/0</i></b><span>交換器</span></div>
+      <div class="kpi"><b>0</b><span>備用機</span></div>
+    </div>
+  </div>
+
+  <h2>核心路由 MikroTik RB5009</h2>
+  <div class="mtgrid">
+      <div class="mtcard">
+        <span class="mtlab">對外連線</span>
+        <b class="mtval ok">連線中</b>
+        <span class="mtsub mono">pppoe-out1(使用中) ✓ · pppoe-out2 ✓</span>
+      </div>
+      <div class="mtcard">
+        <span class="mtlab">下載(即時)</span>
+        <b class="mtval">8.53<i>Mbps</i></b>
+        <span class="mtsub">上傳 0.24 Mbps</span>
+      </div>
+      <div class="mtcard">
+        <span class="mtlab">DHCP 已配發</span>
+        <b class="mtval ok">21<i>/1013</i></b>
+        <span class="mtsub">用量 2.1%</span>
+      </div>
+      <div class="mtcard">
+        <span class="mtlab">其中用戶端裝置</span>
+        <b class="mtval">13</b>
+        <span class="mtsub">另有 8 台網路設備</span>
+      </div>
+      <div class="mtcard">
+        <span class="mtlab">RB5009 狀態</span>
+        <b class="mtval ok">正常</b>
+        <span class="mtsub">CPU 0% · 35°C</span>
+      </div>
+      <div class="mtcard wide">
+        <span class="mtlab">位址池範圍</span>
+        <b class="mtval sm mono">192.168.88.10-192.168.91.254</b>
+        <span class="mtsub">共 1013 個可用位址 · RouterOS 7.24.2 (stable)</span>
+      </div>
+    </div>
+
+  <h2>交換器／PoE 供電</h2>
+  <p class="allclear">此站點沒有交換器資料。</p>
+
+  <h2>各台 AP 即時指標</h2>
+  <div class="grid"><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>10</b></div>
+        <div class="ap-tags">
+          <span class="tag">ch 149 · 20MHz</span>
+          <span class="tag">2 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">9<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:9%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 2% · 他源 7%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">7<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:7%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">TX 重試</span>
+        <span class="m-val ok">5<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:5.0%"></i>
+        <u class="tick" style="left:20%"></u><u class="tick" style="left:30%"></u></div>
+      
+    </div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,6.0 33.0,0.0 66.0,0.0 99.0,6.0 132.0,3.0 132,30" class="sp-area"/>
+      <polyline points="0.0,6.0 33.0,0.0 66.0,0.0 99.0,6.0 132.0,3.0" class="sp-line"/>
+      <circle cx="132.0" cy="3.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>26 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">5%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">47%</dd></div>
+        <div><dt>運作時間</dt><dd>1時30分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.246</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>2</b></div>
+        <div class="ap-tags">
+          <span class="tag dfs">ch 100 · 20MHz</span>
+          <span class="tag">0 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">1<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:1%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 1% · 他源 0%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">0<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:0%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,27.0 33.0,27.0 66.0,27.0 99.0,27.0 132.0,27.0 132,30" class="sp-area"/>
+      <polyline points="0.0,27.0 33.0,27.0 66.0,27.0 99.0,27.0 132.0,27.0" class="sp-line"/>
+      <circle cx="132.0" cy="27.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>24 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">3%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">48%</dd></div>
+        <div><dt>運作時間</dt><dd>3時35分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.250</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>4</b></div>
+        <div class="ap-tags">
+          <span class="tag dfs">ch 64 · 20MHz</span>
+          <span class="tag">0 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">2<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:2%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 1% · 他源 1%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">1<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:1%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,3.0 33.0,15.0 66.0,18.0 99.0,18.0 132.0,24.0 132,30" class="sp-area"/>
+      <polyline points="0.0,3.0 33.0,15.0 66.0,18.0 99.0,18.0 132.0,24.0" class="sp-line"/>
+      <circle cx="132.0" cy="24.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>24 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">1%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">47%</dd></div>
+        <div><dt>運作時間</dt><dd>1時32分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.253</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>5</b></div>
+        <div class="ap-tags">
+          <span class="tag">ch 44 · 20MHz</span>
+          <span class="tag">0 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">12<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:12%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 1% · 他源 11%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">11<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:11%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,2.5 33.0,5.0 66.0,0.0 99.0,2.5 132.0,0.0 132,30" class="sp-area"/>
+      <polyline points="0.0,2.5 33.0,5.0 66.0,0.0 99.0,2.5 132.0,0.0" class="sp-line"/>
+      <circle cx="132.0" cy="0.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>24 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">4%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">47%</dd></div>
+        <div><dt>運作時間</dt><dd>1時31分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.247</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>6</b></div>
+        <div class="ap-tags">
+          <span class="tag">ch 165 · 20MHz</span>
+          <span class="tag">0 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">6<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:6%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 1% · 他源 5%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">5<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:5%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,21.0 33.0,24.0 66.0,9.0 99.0,12.0 132.0,12.0 132,30" class="sp-area"/>
+      <polyline points="0.0,21.0 33.0,24.0 66.0,9.0 99.0,12.0 132.0,12.0" class="sp-line"/>
+      <circle cx="132.0" cy="12.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>24 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">4%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">47%</dd></div>
+        <div><dt>運作時間</dt><dd>1時1分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.251</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>7</b></div>
+        <div class="ap-tags">
+          <span class="tag">ch 157 · 20MHz</span>
+          <span class="tag">2 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">5<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:5%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 2% · 他源 3%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">3<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:3%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,18.0 33.0,21.0 66.0,18.0 99.0,18.0 132.0,15.0 132,30" class="sp-area"/>
+      <polyline points="0.0,18.0 33.0,21.0 66.0,18.0 99.0,18.0 132.0,15.0" class="sp-line"/>
+      <circle cx="132.0" cy="15.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>26 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">4%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">47%</dd></div>
+        <div><dt>運作時間</dt><dd>59分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.240</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>8</b></div>
+        <div class="ap-tags">
+          <span class="tag">ch 40 · 20MHz</span>
+          <span class="tag">0 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">1<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:1%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 1% · 他源 0%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">0<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:0%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,27.0 33.0,27.0 66.0,27.0 99.0,27.0 132.0,27.0 132,30" class="sp-area"/>
+      <polyline points="0.0,27.0 33.0,27.0 66.0,27.0 99.0,27.0 132.0,27.0" class="sp-line"/>
+      <circle cx="132.0" cy="27.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>24 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">3%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">48%</dd></div>
+        <div><dt>運作時間</dt><dd>3時33分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.249</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article><article class="ap ok">
+      <header class="ap-h">
+        <div class="ap-id">AP <b>9</b></div>
+        <div class="ap-tags">
+          <span class="tag">ch 165 · 20MHz</span>
+          <span class="tag">0 人</span>
+        </div>
+      </header>
+      <div class="meters">
+        <div class="m">
+      <div class="m-top"><span class="m-lab">總空中時間</span>
+        <span class="m-val ok">2<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:2%"></i>
+        <u class="tick" style="left:50%"></u><u class="tick" style="left:70%"></u></div>
+      <div class="m-note">自身 1% · 他源 1%</div>
+    </div>
+        <div class="m">
+      <div class="m-top"><span class="m-lab">他源干擾</span>
+        <span class="m-val ok">1<span class="m-u">%</span></span></div>
+      <div class="track"><i class="fill ok" style="width:1%"></i>
+        <u class="tick" style="left:25%"></u><u class="tick" style="left:40%"></u></div>
+      
+    </div>
+        <div class="m"><div class="m-top"><span class="m-lab">TX 重試</span><span class="m-val na">—</span></div><div class="m-note">計數器重置中,樣本不足</div></div>
+      </div>
+      <div class="sparkwrap"><span class="sp-lab">空中時間趨勢</span><svg class="spark" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,30 0.0,18.0 33.0,18.0 66.0,21.0 99.0,24.0 132.0,24.0 132,30" class="sp-area"/>
+      <polyline points="0.0,18.0 33.0,18.0 66.0,21.0 99.0,24.0 132.0,24.0" class="sp-line"/>
+      <circle cx="132.0" cy="24.0" r="2.4" class="sp-dot"/></svg></div>
+      <dl class="facts">
+        <div><dt>發射功率</dt><dd>26 dBm <span class="sub">auto</span></dd></div>
+        <div><dt>CPU</dt><dd class="ok">3%</dd></div>
+        <div><dt>記憶體</dt><dd class="ok">47%</dd></div>
+        <div><dt>運作時間</dt><dd>59分</dd></div>
+        <div><dt>IP</dt><dd class="mono">192.168.88.241</dd></div>
+        <div><dt>Min RSSI</dt><dd>未啟用</dd></div>
+      </dl>
+    </article></div>
+
+  <h2>連線優化</h2>
+  <div class="swpoe"><span>模式</span><b>觀察模式(只記錄,不踢)</b>
+      <span>連續 3 分鐘以上連線不佳 0 台</span></div>
+      <div class="scroll"><table class="ref"><thead><tr><th>時間</th><th>AP</th><th>裝置</th><th>原因</th><th>持續</th><th>動作</th></tr></thead>
+      <tbody><tr><td colspan="6">目前沒有需要重新連線的裝置</td></tr></tbody></table></div>
+
+  <h2>需要調整的項目</h2>
+  <ol class="isslist"><li class="iss crit">
+        <div class="iss-h"><span class="pill crit">嚴重</span>
+          <h3>頻道 165 撞頻:AP 6 與 AP 9</h3></div>
+        <p class="iss-d">共用 ch165,彼此同頻干擾。AP 6 目前 0 人,是影響最小的搬移對象。</p>
+        <p class="iss-f"><span>建議</span>把 AP 6 的 5GHz 頻道從 ch165 改成 ch36(目前無人使用)。 路徑:UniFi → 裝置 → AP 6 → 設定 → 無線電 → 5 GHz 頻道。</p></li></ol>
+
+  <h2>判讀基準</h2>
+  <div class="scroll"><table class="ref">
+    <thead><tr><th>指標</th><th>健康</th><th>注意</th><th>異常</th><th>代表意義</th></tr></thead>
+    <tbody>
+      <tr><td>總空中時間</td><td class="n g">&lt; 50%</td><td class="n a">50–70%</td><td class="n r">&gt; 70%</td>
+        <td>頻道被佔用的比例,滿了就塞車</td></tr>
+      <tr><td>他源干擾</td><td class="n g">&lt; 25%</td><td class="n a">25–40%</td><td class="n r">&gt; 40%</td>
+        <td>非本台造成的佔用,外部訊號或鄰台</td></tr>
+      <tr><td>TX 重試</td><td class="n g">&lt; 20%</td><td class="n a">20–30%</td><td class="n r">&gt; 30%</td>
+        <td>傳輸失敗重送率,直接反映體感</td></tr>
+      <tr><td>CPU</td><td class="n g">&lt; 60%</td><td class="n a">60–80%</td><td class="n r">&gt; 80%</td>
+        <td>AP 處理器負載</td></tr>
+      <tr><td>記憶體</td><td class="n g">&lt; 85%</td><td class="n a">85–90%</td><td class="n r">&gt; 90%</td>
+        <td>過高可能觸發自動重開</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="foot">
+    <div><b>資料來源</b> UniFi OS API(m09829.hostifi.com · site YC 松菸)每分鐘擷取一次</div>
+    <div><b>備用機</b> 0 台尚未佈署(未用數字編號命名),不列入告警</div>
+    <div><b>DFS 說明</b> 頻道 52–144 屬 DFS,偵測到雷達訊號會被迫跳頻造成瞬斷,現場活動建議避開</div>
+  </div>
+</div>
+<script>
+// GitHub Pages 會讓瀏覽器快取 10 分鐘:每 60 秒帶時間戳記重新抓一次,只替換內容,不整頁閃爍
+(function () {
+  var busy = false, last = Date.now();
+  function refresh() {
+    if (busy) return;
+    busy = true;
+    var url = location.pathname + "?t=" + Date.now();
+    // 現場 WiFi 塞的時候請求可能卡住:20 秒沒回應就放棄,下一輪重試
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 20000);
+    fetch(url, { cache: "no-store", signal: ctl ? ctl.signal : undefined }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.text();
+    }).then(function (html) {
+      var doc = new DOMParser().parseFromString(html, "text/html");
+      var fresh = doc.querySelector(".wrap");
+      var cur = document.querySelector(".wrap");
+      if (fresh && cur) { cur.innerHTML = fresh.innerHTML; document.title = doc.title; last = Date.now(); checkStale(); }
+    }).catch(function () {
+      var el = document.getElementById("live");
+      if (el) el.textContent = "更新失敗(這台裝置連不上網),稍後重試";
+    }).then(function () { clearTimeout(timer); busy = false; });
+  }
+  // 資料超過 3 分鐘沒更新就標紅,現場一眼看得出監控是不是停了
+  function checkStale() {
+    var b = document.querySelector(".stamp b"), el = document.getElementById("live");
+    if (!b || !el) return;
+    var t = new Date(b.textContent.trim().replace(" ", "T") + "+08:00");
+    var age = (Date.now() - t.getTime()) / 1000;
+    if (age > 180) {
+      el.textContent = "資料已 " + Math.floor(age / 60) + " 分鐘沒有更新";
+      el.style.color = "var(--crit)"; el.style.fontWeight = "600";
+    }
+  }
+  checkStale();
+  setInterval(checkStale, 15000);
+  // 手機鎖螢幕或切到別的 App 時,瀏覽器會暫停計時器;回到畫面時立刻抓一次
+  function wake() { if (document.visibilityState !== "hidden" && Date.now() - last > 20000) refresh(); }
+  document.addEventListener("visibilitychange", wake);
+  window.addEventListener("focus", wake);
+  window.addEventListener("pageshow", wake);
+  window.addEventListener("online", refresh);
+  setInterval(function () { if (Date.now() - last >= 55000) refresh(); }, 15000);
+})();
+</script>

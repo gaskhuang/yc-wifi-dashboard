@@ -1,0 +1,528 @@
+{
+ "ts": "2026-11-11 15:35:02",
+ "site": "YC 松菸",
+ "ssids": [
+  "Staff",
+  "Y Combinator"
+ ],
+ "mikrotik": {
+  "ok": true,
+  "board": "RB5009UG+S+",
+  "version": "7.24.2 (stable)",
+  "cpu": 0,
+  "uptime": "1h23m1s",
+  "cpu_temp": 35,
+  "psu_fail": [],
+  "wan_name": "pppoe-out1",
+  "wan_running": true,
+  "wan_members": [
+   "ether1",
+   "pppoe-out1",
+   "pppoe-out2"
+  ],
+  "wans": [
+   {
+    "name": "pppoe-out1",
+    "running": true,
+    "active": true
+   },
+   {
+    "name": "pppoe-out2",
+    "running": true,
+    "active": false
+   }
+  ],
+  "down_mbps": 8.53,
+  "up_mbps": 0.24,
+  "leases_bound": 21,
+  "clients": 13,
+  "infra": 8,
+  "pool_range": "192.168.88.10-192.168.91.254",
+  "pool_capacity": 1013,
+  "pool_used_pct": 2.1
+ },
+ "crs": null,
+ "mt_configured": true,
+ "crs_configured": false,
+ "aps": [
+  {
+   "name": "10",
+   "device": "10",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.246",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 5442,
+   "clients": 2,
+   "channel": 149,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 149,
+   "radio_state": "RUN",
+   "tx_power": 26,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 5.3,
+   "mem": 47.0,
+   "airtime": 9,
+   "self_use": 2,
+   "interference": 7,
+   "tx_retry": 5.0,
+   "retry_ok": true,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "2",
+   "device": "2",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.250",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 12926,
+   "clients": 0,
+   "channel": 100,
+   "bw": 20,
+   "dfs": true,
+   "cfg_channel": 0,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 3.1,
+   "mem": 47.7,
+   "airtime": 1,
+   "self_use": 1,
+   "interference": 0,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "4",
+   "device": "4",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.253",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 5552,
+   "clients": 0,
+   "channel": 64,
+   "bw": 20,
+   "dfs": true,
+   "cfg_channel": 0,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 1.1,
+   "mem": 46.9,
+   "airtime": 2,
+   "self_use": 1,
+   "interference": 1,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "5",
+   "device": "5",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.247",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 5481,
+   "clients": 0,
+   "channel": 44,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 0,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 4.0,
+   "mem": 47.3,
+   "airtime": 12,
+   "self_use": 1,
+   "interference": 11,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "6",
+   "device": "6",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.251",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 3676,
+   "clients": 0,
+   "channel": 165,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 36,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 3.6,
+   "mem": 46.6,
+   "airtime": 6,
+   "self_use": 1,
+   "interference": 5,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "7",
+   "device": "7",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.240",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 3550,
+   "clients": 2,
+   "channel": 157,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 157,
+   "radio_state": "RUN",
+   "tx_power": 26,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 3.6,
+   "mem": 47.1,
+   "airtime": 5,
+   "self_use": 2,
+   "interference": 3,
+   "tx_retry": 20.7,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "8",
+   "device": "8",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.249",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 12787,
+   "clients": 0,
+   "channel": 40,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 0,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 3.2,
+   "mem": 47.7,
+   "airtime": 1,
+   "self_use": 1,
+   "interference": 0,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "9",
+   "device": "9",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.241",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 3551,
+   "clients": 0,
+   "channel": 165,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 165,
+   "radio_state": "RUN",
+   "tx_power": 26,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 3.2,
+   "mem": 47.0,
+   "airtime": 2,
+   "self_use": 1,
+   "interference": 1,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  }
+ ],
+ "offline": [],
+ "spares": [],
+ "switches": [],
+ "issues": [
+  {
+   "sev": "crit",
+   "title": "頻道 165 撞頻:AP 6 與 AP 9",
+   "detail": "共用 ch165,彼此同頻干擾。AP 6 目前 0 人,是影響最小的搬移對象。",
+   "fix": "把 AP 6 的 5GHz 頻道從 ch165 改成 ch36(目前無人使用)。 路徑:UniFi → 裝置 → AP 6 → 設定 → 無線電 → 5 GHz 頻道。",
+   "key": "頻道 # 撞頻:AP 6 與 AP 9"
+  }
+ ],
+ "summary": {
+  "online": 8,
+  "offline": 0,
+  "spares": 0,
+  "switches": 0,
+  "switches_online": 0,
+  "clients": 4,
+  "crit": 1,
+  "warn": 0
+ },
+ "history": [
+  {
+   "ts": "15:30",
+   "clients": 3,
+   "ap": {
+    "10": {
+     "air": 8,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 9,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 11,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 4,
+     "retry": 21.3
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 4,
+     "retry": 0.0
+    }
+   }
+  },
+  {
+   "ts": "15:31",
+   "clients": 3,
+   "ap": {
+    "10": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 5,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 3,
+     "retry": 22.8
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 4,
+     "retry": 0.0
+    }
+   }
+  },
+  {
+   "ts": "15:32",
+   "clients": 4,
+   "ap": {
+    "10": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 12,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 7,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 4,
+     "retry": 22.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 3,
+     "retry": 0.0
+    }
+   }
+  },
+  {
+   "ts": "15:33",
+   "clients": 4,
+   "ap": {
+    "10": {
+     "air": 8,
+     "retry": 5.1
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 11,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 6,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 4,
+     "retry": 22.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 2,
+     "retry": 0.0
+    }
+   }
+  },
+  {
+   "ts": "15:35",
+   "clients": 4,
+   "ap": {
+    "10": {
+     "air": 9,
+     "retry": 5.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 12,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 6,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 5,
+     "retry": 20.7
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 2,
+     "retry": 0.0
+    }
+   }
+  }
+ ],
+ "optimize": {
+  "mode": "observe",
+  "watching": 0,
+  "gave_up": 0,
+  "recent": [],
+  "persistent_count": 0,
+  "persistent_by_ap": {},
+  "persistent": []
+ }
+}

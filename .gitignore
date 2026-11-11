@@ -1,0 +1,20 @@
+
+# 憑證
+secrets.env
+*.env
+
+# 推播狀態(每台機器各自記錄)
+notify_state.json
+
+# 設定備份(含 WiFi 密碼,不進 repo)
+backup/
+
+# 本機暫存資料
+history.json
+__pycache__/
+.last_push
+loop.log
+
+# 連線優化的狀態與逐分鐘紀錄(含完整 MAC,只留本機)
+optimize_state.json
+logs/

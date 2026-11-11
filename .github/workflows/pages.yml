@@ -1,0 +1,34 @@
+name: 發布儀表板
+
+# Mac mini 每分鐘推一次資料；改用 Actions 發布，不受 Pages 傳統建置每小時約 10 次的限制
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時只跑一個發布；排隊中的舊版本會被更新的取代，正在發布的不中斷
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: 只打包網頁需要的檔案
+        run: mkdir _site && cp index.html dashboard.html data.json _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
