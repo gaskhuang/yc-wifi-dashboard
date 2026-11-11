@@ -1,46 +1,11 @@
 {
- "ts": "2026-11-11 20:30:29",
+ "ts": "2026-11-11 20:31:43",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
   "Y Combinator"
  ],
- "mikrotik": {
-  "ok": true,
-  "board": "RB5009UG+S+",
-  "version": "7.24.2 (stable)",
-  "cpu": 0,
-  "uptime": "6h18m27s",
-  "cpu_temp": 35,
-  "psu_fail": [],
-  "wan_name": "pppoe-out1",
-  "wan_running": true,
-  "wan_members": [
-   "ether1",
-   "pppoe-out1",
-   "pppoe-out2"
-  ],
-  "wans": [
-   {
-    "name": "pppoe-out1",
-    "running": true,
-    "active": true
-   },
-   {
-    "name": "pppoe-out2",
-    "running": true,
-    "active": false
-   }
-  ],
-  "down_mbps": 0.22,
-  "up_mbps": 0.19,
-  "leases_bound": 30,
-  "clients": 22,
-  "infra": 8,
-  "pool_range": "192.168.88.10-192.168.91.254",
-  "pool_capacity": 1013,
-  "pool_used_pct": 3.0
- },
+ "mikrotik": null,
  "crs": null,
  "mt_configured": true,
  "crs_configured": false,
@@ -118,7 +83,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 23272,
+   "uptime": 23357,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,7 +95,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.1,
+   "cpu": 0.9,
    "mem": 47.8,
    "airtime": 1,
    "self_use": 1,
@@ -182,7 +147,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 21401,
+   "uptime": 21483,
    "clients": 0,
    "channel": 132,
    "bw": 20,
@@ -196,8 +161,8 @@
    "min_rssi": null,
    "cpu": 1.7,
    "mem": 47.0,
-   "airtime": 4,
-   "self_use": 2,
+   "airtime": 3,
+   "self_use": 1,
    "interference": 2,
    "tx_retry": 0.0,
    "retry_ok": false,
@@ -246,7 +211,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 30501,
+   "uptime": 30567,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,7 +223,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
+   "cpu": 3.1,
    "mem": 47.9,
    "airtime": 1,
    "self_use": 1,
@@ -275,10 +240,10 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.241",
-   "weak": 1,
+   "weak": 2,
    "slow": 1,
    "weakest": -94,
-   "uptime": 21282,
+   "uptime": 21361,
    "clients": 2,
    "channel": 165,
    "bw": 20,
@@ -290,11 +255,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.3,
-   "mem": 48.0,
-   "airtime": 2,
+   "cpu": 3.2,
+   "mem": 47.9,
+   "airtime": 1,
    "self_use": 1,
-   "interference": 1,
+   "interference": 0,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": "24 poe",
@@ -312,10 +277,10 @@
    "model": "Alta S24-POE · 8/26 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 46.8,
+   "poe_used": 48.9,
    "poe_budget": 240.0,
    "poe_budget_est": false,
-   "poe_pct": 19.5,
+   "poe_pct": 20.4,
    "temp": 35.1,
    "ports": [
     {
@@ -343,7 +308,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 7.3
     },
     {
      "idx": 10,
@@ -352,7 +317,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 9.6
+     "poe_w": 7.8
     },
     {
      "idx": 12,
@@ -361,7 +326,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.8
     },
     {
      "idx": 13,
@@ -370,7 +335,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.7
+     "poe_w": 8
     },
     {
      "idx": 15,
@@ -388,7 +353,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 10.6
     }
    ]
   },
@@ -412,7 +377,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 7.1
     },
     {
      "idx": 2,
@@ -421,7 +386,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.6
     },
     {
      "idx": 8,
@@ -437,6 +402,13 @@
  ],
  "issues": [
   {
+   "sev": "crit",
+   "title": "MikroTik RB5009 無法連線",
+   "detail": "路由器 REST API 沒有回應,DHCP 與對外頻寬狀態無法取得。",
+   "fix": "確認路由器是否斷電、對外線路是否中斷。若現場網路正常,多半是 DDNS 還沒更新到新位址:在 RB5009 上執行 /ip cloud force-update。",
+   "key": "ccr_down"
+  },
+  {
    "sev": "warn",
    "title": "AP 7 有 2 位用戶速率低於 12 Mbps",
    "detail": "連線速率偏低,通常是訊號弱或裝置較舊,會拖慢整台 AP 的空中時間。",
@@ -451,48 +423,10 @@
   "switches": 2,
   "switches_online": 2,
   "clients": 11,
-  "crit": 0,
+  "crit": 1,
   "warn": 1
  },
  "history": [
-  {
-   "ts": "17:57",
-   "clients": 6,
-   "ap": {
-    "10": {
-     "air": 14,
-     "retry": 0.0
-    },
-    "2": {
-     "air": 2,
-     "retry": 0.0
-    },
-    "4": {
-     "air": 2,
-     "retry": 0.0
-    },
-    "5": {
-     "air": 11,
-     "retry": 0.0
-    },
-    "6": {
-     "air": 26,
-     "retry": 0.0
-    },
-    "7": {
-     "air": 5,
-     "retry": 0.0
-    },
-    "8": {
-     "air": 3,
-     "retry": 0.0
-    },
-    "9": {
-     "air": 13,
-     "retry": 11.1
-    }
-   }
-  },
   {
    "ts": "17:57",
    "clients": 6,
@@ -5923,6 +5857,44 @@
     },
     "9": {
      "air": 2,
+     "retry": 0.0
+    }
+   }
+  },
+  {
+   "ts": "20:31",
+   "clients": 11,
+   "ap": {
+    "10": {
+     "air": 4,
+     "retry": 15.5
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 8,
+     "retry": 2.2
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 1,
      "retry": 0.0
     }
    }
