@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 15:46:51",
+ "ts": "2026-11-11 15:47:55",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,7 +10,7 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 0,
-  "uptime": "1h34m49s",
+  "uptime": "1h35m54s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 0.57,
-  "up_mbps": 0.16,
+  "down_mbps": 18.79,
+  "up_mbps": 0.89,
   "leases_bound": 23,
   "clients": 15,
   "infra": 8,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 13640,
+   "uptime": 13710,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -116,9 +116,9 @@
    "radio": "wifi1",
    "ip": "192.168.88.253",
    "weak": 0,
-   "slow": 0,
+   "slow": 2,
    "weakest": null,
-   "uptime": 6227,
+   "uptime": 6315,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,11 +130,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 2.9,
-   "mem": 46.8,
-   "airtime": 13,
-   "self_use": 1,
-   "interference": 12,
+   "cpu": 2.3,
+   "mem": 46.9,
+   "airtime": 8,
+   "self_use": 2,
+   "interference": 6,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 4275,
+   "uptime": 4353,
    "clients": 0,
    "channel": 157,
    "bw": 20,
@@ -226,8 +226,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
-   "mem": 47.2,
+   "cpu": 3.4,
+   "mem": 47.1,
    "airtime": 3,
    "self_use": 1,
    "interference": 2,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 13505,
+   "uptime": 13588,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -260,8 +260,8 @@
    "min_rssi": null,
    "cpu": 3.3,
    "mem": 47.8,
-   "airtime": 3,
-   "self_use": 3,
+   "airtime": 1,
+   "self_use": 1,
    "interference": 0,
    "tx_retry": 0.0,
    "retry_ok": false,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 4320,
+   "uptime": 4384,
    "clients": 1,
    "channel": 165,
    "bw": 20,
@@ -290,13 +290,13 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.0,
-   "mem": 47.0,
-   "airtime": 2,
+   "cpu": 3.9,
+   "mem": 47.1,
+   "airtime": 1,
    "self_use": 1,
-   "interference": 1,
-   "tx_retry": 12.9,
-   "retry_ok": false,
+   "interference": 0,
+   "tx_retry": 14.2,
+   "retry_ok": true,
    "up_sw": null,
    "up_port": null,
    "up_speed": 1000
@@ -305,7 +305,15 @@
  "offline": [],
  "spares": [],
  "switches": [],
- "issues": [],
+ "issues": [
+  {
+   "sev": "warn",
+   "title": "AP 4 有 2 位用戶速率低於 12 Mbps",
+   "detail": "連線速率偏低,通常是訊號弱或裝置較舊,會拖慢整台 AP 的空中時間。",
+   "fix": "檢查這些用戶所在座位的訊號;若人數持續增加,考慮在該區補 AP。",
+   "key": "AP 4 有 # 位用戶速率低於 # Mbps"
+  }
+ ],
  "summary": {
   "online": 8,
   "offline": 0,
@@ -314,7 +322,7 @@
   "switches_online": 0,
   "clients": 2,
   "crit": 0,
-  "warn": 0
+  "warn": 1
  },
  "history": [
   {
@@ -922,6 +930,44 @@
     "9": {
      "air": 2,
      "retry": 12.9
+    }
+   }
+  },
+  {
+   "ts": "15:47",
+   "clients": 2,
+   "ap": {
+    "10": {
+     "air": 7,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 8,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 11,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 6,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 1,
+     "retry": 14.2
     }
    }
   }
