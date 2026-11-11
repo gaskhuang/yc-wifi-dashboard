@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 16:55:51",
+ "ts": "2026-11-11 16:56:56",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,8 +10,8 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 0,
-  "uptime": "2h43m50s",
-  "cpu_temp": 34,
+  "uptime": "2h44m55s",
+  "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
   "wan_running": true,
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 1.7,
-  "up_mbps": 0.13,
+  "down_mbps": 1.55,
+  "up_mbps": 0.26,
   "leases_bound": 25,
   "clients": 17,
   "infra": 8,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10314,
+   "uptime": 10384,
    "clients": 1,
    "channel": 149,
    "bw": 20,
@@ -66,11 +66,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.6,
-   "mem": 47.2,
-   "airtime": 15,
+   "cpu": 3.5,
+   "mem": 47.1,
+   "airtime": 13,
    "self_use": 1,
-   "interference": 14,
+   "interference": 12,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10421,
+   "uptime": 10496,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,10 +130,10 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.2,
+   "cpu": 1.0,
    "mem": 47.1,
-   "airtime": 5,
-   "self_use": 3,
+   "airtime": 3,
+   "self_use": 1,
    "interference": 2,
    "tx_retry": 0.0,
    "retry_ok": false,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10270,
+   "uptime": 10359,
    "clients": 2,
    "channel": 44,
    "bw": 20,
@@ -162,11 +162,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.9,
+   "cpu": 3.8,
    "mem": 47.6,
-   "airtime": 12,
-   "self_use": 2,
-   "interference": 10,
+   "airtime": 13,
+   "self_use": 1,
+   "interference": 12,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8557,
+   "uptime": 8635,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -194,11 +194,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.4,
+   "cpu": 1.5,
    "mem": 46.8,
-   "airtime": 19,
+   "airtime": 49,
    "self_use": 1,
-   "interference": 18,
+   "interference": 48,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8451,
+   "uptime": 8519,
    "clients": 0,
    "channel": 157,
    "bw": 20,
@@ -226,11 +226,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.6,
+   "cpu": 3.5,
    "mem": 47.4,
-   "airtime": 5,
+   "airtime": 6,
    "self_use": 1,
-   "interference": 4,
+   "interference": 5,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8417,
+   "uptime": 8481,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -295,7 +295,7 @@
    "airtime": 2,
    "self_use": 2,
    "interference": 0,
-   "tx_retry": 15.2,
+   "tx_retry": 19.9,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -305,7 +305,15 @@
  "offline": [],
  "spares": [],
  "switches": [],
- "issues": [],
+ "issues": [
+  {
+   "sev": "crit",
+   "title": "AP 6 他源干擾 48%",
+   "detail": "ch36 有外部訊號源在佔用空中時間,不是本台造成的。",
+   "fix": "把 AP 6 的 5GHz 頻道從 ch36 改成 ch48(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
+   "key": "AP 6 他源干擾 #%"
+  }
+ ],
  "summary": {
   "online": 8,
   "offline": 0,
@@ -313,7 +321,7 @@
   "switches": 0,
   "switches_online": 0,
   "clients": 6,
-  "crit": 0,
+  "crit": 1,
   "warn": 0
  },
  "history": [
@@ -3354,6 +3362,44 @@
     "9": {
      "air": 2,
      "retry": 15.2
+    }
+   }
+  },
+  {
+   "ts": "16:56",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 13,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 13,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 49,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 6,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 2,
+     "retry": 19.9
     }
    }
   }
