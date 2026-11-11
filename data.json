@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 15:54:23",
+ "ts": "2026-11-11 15:55:28",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,8 +9,8 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 1,
-  "uptime": "1h42m22s",
+  "cpu": 0,
+  "uptime": "1h43m27s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,14 +32,14 @@
     "active": false
    }
   ],
-  "down_mbps": 83.43,
-  "up_mbps": 0.59,
-  "leases_bound": 23,
-  "clients": 15,
+  "down_mbps": 107.93,
+  "up_mbps": 1.09,
+  "leases_bound": 22,
+  "clients": 14,
   "infra": 8,
   "pool_range": "192.168.88.10-192.168.91.254",
   "pool_capacity": 1013,
-  "pool_used_pct": 2.3
+  "pool_used_pct": 2.2
  },
  "crs": null,
  "mt_configured": true,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 6627,
+   "uptime": 6698,
    "clients": 1,
    "channel": 149,
    "bw": 20,
@@ -66,11 +66,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.7,
+   "cpu": 4.5,
    "mem": 47.0,
-   "airtime": 11,
+   "airtime": 9,
    "self_use": 1,
-   "interference": 10,
+   "interference": 8,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 6696,
+   "uptime": 6779,
    "clients": 0,
    "channel": 64,
    "bw": 20,
@@ -130,11 +130,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.5,
-   "mem": 46.9,
-   "airtime": 3,
+   "cpu": 1.2,
+   "mem": 47.0,
+   "airtime": 4,
    "self_use": 1,
-   "interference": 2,
+   "interference": 3,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 6636,
+   "uptime": 6712,
    "clients": 0,
    "channel": 44,
    "bw": 20,
@@ -162,7 +162,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.3,
+   "cpu": 3.8,
    "mem": 47.4,
    "airtime": 11,
    "self_use": 1,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 4734,
+   "uptime": 4807,
    "clients": 0,
    "channel": 157,
    "bw": 20,
@@ -226,11 +226,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.7,
+   "cpu": 3.4,
    "mem": 47.1,
-   "airtime": 3,
+   "airtime": 8,
    "self_use": 1,
-   "interference": 2,
+   "interference": 7,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 13971,
+   "uptime": 14040,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -259,7 +259,7 @@
    "min_rssi_on": false,
    "min_rssi": null,
    "cpu": 3.2,
-   "mem": 47.9,
+   "mem": 47.8,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 4737,
+   "uptime": 4824,
    "clients": 1,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.2,
+   "cpu": 8.6,
    "mem": 47.0,
-   "airtime": 2,
-   "self_use": 2,
-   "interference": 0,
-   "tx_retry": 13.3,
+   "airtime": 86,
+   "self_use": 85,
+   "interference": 1,
+   "tx_retry": 11.1,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -305,7 +305,15 @@
  "offline": [],
  "spares": [],
  "switches": [],
- "issues": [],
+ "issues": [
+  {
+   "sev": "crit",
+   "title": "AP 9 空中時間 86%(自身流量佔 85%)",
+   "detail": "1 位用戶掛在這台,85% 是自己的傳輸、只有 1% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "fix": "依序執行:1) 若仍不足,在 AP 9 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 9 → 設定 → 無線電。",
+   "key": "AP 9 空中時間 #%(自身流量佔 #%)"
+  }
+ ],
  "summary": {
   "online": 8,
   "offline": 0,
@@ -313,7 +321,7 @@
   "switches": 0,
   "switches_online": 0,
   "clients": 2,
-  "crit": 0,
+  "crit": 1,
   "warn": 0
  },
  "history": [
@@ -1188,6 +1196,44 @@
     "9": {
      "air": 2,
      "retry": 13.3
+    }
+   }
+  },
+  {
+   "ts": "15:55",
+   "clients": 2,
+   "ap": {
+    "10": {
+     "air": 9,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 11,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 23,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 8,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 86,
+     "retry": 11.1
     }
    }
   }
