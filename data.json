@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 17:07:43",
+ "ts": "2026-11-11 17:08:48",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,7 +10,7 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 0,
-  "uptime": "2h55m42s",
+  "uptime": "2h56m46s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 2.12,
-  "up_mbps": 11.72,
+  "down_mbps": 2.87,
+  "up_mbps": 5.37,
   "leases_bound": 30,
   "clients": 22,
   "infra": 8,
@@ -54,8 +54,8 @@
    "weak": 0,
    "slow": 1,
    "weakest": null,
-   "uptime": 11021,
-   "clients": 1,
+   "uptime": 11104,
+   "clients": 2,
    "channel": 149,
    "bw": 20,
    "dfs": false,
@@ -66,12 +66,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.9,
-   "mem": 47.2,
-   "airtime": 11,
+   "cpu": 4.3,
+   "mem": 47.4,
+   "airtime": 12,
    "self_use": 1,
-   "interference": 10,
-   "tx_retry": 0.0,
+   "interference": 11,
+   "tx_retry": 25.0,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -150,8 +150,8 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10991,
-   "clients": 1,
+   "uptime": 11076,
+   "clients": 2,
    "channel": 44,
    "bw": 20,
    "dfs": false,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.8,
+   "cpu": 4.4,
    "mem": 47.6,
-   "airtime": 11,
+   "airtime": 9,
    "self_use": 1,
-   "interference": 10,
-   "tx_retry": 3.7,
+   "interference": 8,
+   "tx_retry": 6.8,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -211,10 +211,10 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.240",
-   "weak": 2,
+   "weak": 0,
    "slow": 0,
-   "weakest": -77,
-   "uptime": 9150,
+   "weakest": null,
+   "uptime": 9220,
    "clients": 0,
    "channel": 157,
    "bw": 20,
@@ -226,7 +226,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.1,
+   "cpu": 4.0,
    "mem": 47.4,
    "airtime": 5,
    "self_use": 1,
@@ -276,9 +276,9 @@
    "radio": "wifi1",
    "ip": "192.168.88.241",
    "weak": 0,
-   "slow": 1,
+   "slow": 0,
    "weakest": null,
-   "uptime": 9137,
+   "uptime": 9219,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.3,
+   "cpu": 6.3,
    "mem": 47.3,
-   "airtime": 2,
-   "self_use": 1,
-   "interference": 1,
-   "tx_retry": 11.4,
+   "airtime": 11,
+   "self_use": 9,
+   "interference": 2,
+   "tx_retry": 13.7,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -320,7 +320,7 @@
   "spares": 0,
   "switches": 0,
   "switches_online": 0,
-  "clients": 5,
+  "clients": 7,
   "crit": 0,
   "warn": 1
  },
@@ -3780,6 +3780,44 @@
     "9": {
      "air": 2,
      "retry": 11.4
+    }
+   }
+  },
+  {
+   "ts": "17:08",
+   "clients": 7,
+   "ap": {
+    "10": {
+     "air": 12,
+     "retry": 25.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 9,
+     "retry": 6.8
+    },
+    "6": {
+     "air": 27,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 5,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 11,
+     "retry": 13.7
     }
    }
   }
