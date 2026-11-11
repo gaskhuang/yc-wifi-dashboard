@@ -13,6 +13,14 @@ python3 collect_logs.py || true
 # 連線優化：塞住的 AP 上持續不佳的裝置踢掉重連（預設觀察模式，OPTIMIZE_MODE=kick 才會真的踢）
 python3 optimize_clients.py || true
 python3 render.py
+# 每輪的儀表板資料與 Alta 快照存到 logs/,每 5 分鐘把 logs/ 同步到 NAS(NAS 沒掛上就略過,下次補)
+python3 archive_round.py || true
+NAS_ROOT="$HOME/nas-mounts/unifi-logs"
+NAS_DIR="${YC_NAS_DIR:-$NAS_ROOT/events/2026-11-11_YC-songyan}"
+last_nas=$(cat .last_nas 2>/dev/null || echo 0)
+if [ $(( $(date +%s) - last_nas )) -ge "${NAS_SYNC_EVERY:-300}" ] && mount | grep -q " on $NAS_ROOT "; then
+  mkdir -p "$NAS_DIR" && rsync -a logs/ "$NAS_DIR/" && date +%s > .last_nas || echo "NAS 同步失敗,下輪再試"
+fi
 # LINE 推播失敗不影響網頁更新
 python3 notify.py || true
 
