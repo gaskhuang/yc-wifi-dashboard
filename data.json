@@ -1,10 +1,7 @@
 {
- "ts": "2026-11-11 20:36:29",
+ "ts": "2026-11-11 20:38:13",
  "site": "YC 松菸",
- "ssids": [
-  "Staff",
-  "Y Combinator"
- ],
+ "ssids": [],
  "mikrotik": null,
  "crs": null,
  "mt_configured": true,
@@ -489,44 +486,6 @@
   "warn": 0
  },
  "history": [
-  {
-   "ts": "18:00",
-   "clients": 8,
-   "ap": {
-    "10": {
-     "air": 13,
-     "retry": 0.0
-    },
-    "2": {
-     "air": 1,
-     "retry": 0.0
-    },
-    "4": {
-     "air": 3,
-     "retry": 0.0
-    },
-    "5": {
-     "air": 13,
-     "retry": 7.1
-    },
-    "6": {
-     "air": 29,
-     "retry": 0.0
-    },
-    "7": {
-     "air": 5,
-     "retry": 0.0
-    },
-    "8": {
-     "air": 2,
-     "retry": 0.0
-    },
-    "9": {
-     "air": 12,
-     "retry": 10.8
-    }
-   }
-  },
   {
    "ts": "18:01",
    "clients": 8,
@@ -5880,6 +5839,11 @@
   },
   {
    "ts": "20:36",
+   "clients": 0,
+   "ap": {}
+  },
+  {
+   "ts": "20:38",
    "clients": 0,
    "ap": {}
   }
