@@ -1,0 +1,1 @@
+{ "name": "yc-wifi-dashboard", "private": true, "dependencies": { "playwright-core": "1.65.0" } }

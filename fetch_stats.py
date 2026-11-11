@@ -25,6 +25,11 @@ CRS_HOSTS = [h for h in os.environ.get("YC_CRS_HOSTS",
 # YC_CRS_HOSTS 設成空字串即可關閉 CRS418 監控(現場沒用到時)
 CRS_ENABLED = MT_ENABLED and bool(CRS_HOSTS)
 POE_OK = {"powered-on", "waiting-for-load", "disabled"}
+# Alta 交換器:alta_watch.js 每 20 秒寫 alta.json;超過 ALTA_STALE 秒視為讀不到
+ALTA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "alta.json")
+ALTA_STALE = 180
+ALTA_POE_BUDGET = {"5": 240.0, "3": 60.0}   # model 5 = S24-POE、3 = S8-POE(Alta 後台顯示的總預算)
+ALTA_MODEL = {"5": "Alta S24-POE", "3": "Alta S8-POE"}
 TPE  = timezone(timedelta(hours=8))
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -164,6 +169,17 @@ def pool_capacity(ranges):
         elif seg.strip():
             total += 1
     return total
+
+
+def load_alta():
+    """讀 alta_watch.js 的輸出;檔案不存在回 None,過期回 {"stale": True}"""
+    try:
+        d = json.load(open(ALTA_FILE))
+    except (OSError, ValueError):
+        return None
+    if time.time() - d.get("written", 0) > ALTA_STALE:
+        return {"stale": True, "switches": []}
+    return d
 
 
 def collect_ccr(infra_macs):
@@ -308,6 +324,18 @@ def main():
             port_ap[(u["uplink_mac"], u["uplink_remote_port"])] = nm
             ap_port[d.get("mac")] = (u["uplink_mac"], u["uplink_remote_port"])
 
+    # Alta 交換器:用 LLDP 鄰居表對應 AP 接在哪個埠
+    alta = load_alta()
+    for sw in (alta or {}).get("switches", []):
+        sw_name[sw["mac"]] = sw["name"]
+        for pt in sw["ports"]:
+            nb = (pt.get("neighbor") or {}).get("mac", "")
+            ap = next((d for d in devices if d.get("type") == "uap"
+                       and (d.get("mac") or "").replace(":", "").lower() == nb), None)
+            if ap:
+                port_ap[(sw["mac"], pt["idx"])] = ap.get("name") or ap.get("mac", "?")[-5:]
+                ap_port[ap.get("mac")] = (sw["mac"], pt["idx"])
+
     # 接在 CRS418 上的 AP(例如 E7):用 CRS 的 LLDP 鄰居表對應埠號
     if crs:
         sw_name["CRS418"] = "CRS418"
@@ -407,6 +435,27 @@ def main():
             "poe_used": used, "poe_budget": budget, "poe_budget_est": est,
             "poe_pct": round(used / budget * 100, 1) if online and budget else None,
             "ports": ports,
+        })
+    now = time.time()
+    for sw in (alta or {}).get("switches", []):
+        online = bool(sw.get("ts")) and now - sw["ts"] < ALTA_STALE
+        # 只列有連線的埠(24 埠全列太長);非 AP 的鄰居用 LLDP 名稱標示,例如 RB5009、另一台交換器
+        ports = [{
+            "idx": pt["idx"], "ap": port_ap.get((sw["mac"], pt["idx"])),
+            "label": ((pt.get("neighbor") or {}).get("name") or "") + ("(上行)" if pt.get("uplink") else ""),
+            "up": pt["up"] if online else None,
+            "speed": pt["speed"] if online else None,
+            "poe": pt["poe"],
+            "poe_w": round(pt["poe_w"], 1) if online and pt["poe"] and pt.get("poe_w") is not None else None,
+        } for pt in sw["ports"] if not online or pt["up"]]
+        budget = ALTA_POE_BUDGET.get(str(sw.get("model")))
+        used = round(sum(p["poe_w"] or 0 for p in ports), 1) if online else None
+        switches.append({
+            "name": sw["name"], "mac": sw["mac"], "ip": sw.get("ip") or "", "model": f"{ALTA_MODEL.get(str(sw.get('model')), 'Alta')} · {sum(1 for p in sw['ports'] if p['up'])}/{sw.get('nports')} 埠使用中",
+            "online": online, "at_venue": (sw.get("ip") or "").startswith(VENUE_NET),
+            "poe_used": used, "poe_budget": budget, "poe_budget_est": False,
+            "poe_pct": round(used / budget * 100, 1) if online and budget else None,
+            "temp": sw.get("temp"), "ports": ports,
         })
     switches.sort(key=lambda x: x["name"] or "")
     sw_by_mac = {x["mac"]: x for x in switches}
@@ -617,6 +666,11 @@ def main():
                 + ("(預算為推估值)" if sw["poe_budget_est"] else "") + "。超過預算時交換器會關掉部分埠的供電,AP 會無預警斷線。",
                 "把部分 AP 移到另一台交換器,或改用變壓器供電給交換器以提高 PoE 預算。",
                 key=f"poe_budget:{n}")
+
+    if alta is None or alta.get("stale"):
+        add("warn", "Alta 交換器資料讀不到",
+            "alta_watch.js 沒有在跑,或超過 3 分鐘沒更新;交換器與 PoE 狀態暫時無法顯示。",
+            "在 Mac mini 執行 screen -ls 確認 yc-alta 還在,並看 ~/yc-wifi-dashboard/alta.log。", key="alta_stale")
 
     # AP 上行速率不足 1Gbps:多半是網路線或水晶頭有問題
     for a in aps:

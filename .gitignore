@@ -18,3 +18,7 @@ loop.log
 # 連線優化的狀態與逐分鐘紀錄(含完整 MAC,只留本機)
 optimize_state.json
 logs/
+node_modules/
+alta.json
+alta.json.tmp
+alta.log

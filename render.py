@@ -209,7 +209,8 @@ for sw in D.get("switches", []):
         else:
             link = '<td class="n">未連線</td>'
         poe = "—" if pt["poe_w"] is None else f"{pt['poe_w']:g} W"
-        dev = f"AP {esc(pt['ap'])}" if pt["ap"] else ("上行／供電輸入" if not pt["poe"] else "")
+        dev = (f"AP {esc(pt['ap'])}" if pt["ap"] else esc(pt["label"]) if pt.get("label")
+               else ("上行／供電輸入" if not pt["poe"] else ""))
         rows.append(f'<tr><td class="n">{pt["idx"]}</td><td>{dev}</td>{link}<td class="n">{poe}</td></tr>')
     sw_parts.append(f"""<div class="swcard">
       <div class="swhead"><b>{esc(sw['name'])}</b>{status}</div>
