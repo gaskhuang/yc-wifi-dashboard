@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 17:00:10",
+ "ts": "2026-11-11 17:01:15",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,7 +10,7 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 1,
-  "uptime": "2h48m9s",
+  "uptime": "2h49m14s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 76.93,
-  "up_mbps": 0.7,
+  "down_mbps": 74.78,
+  "up_mbps": 1.29,
   "leases_bound": 25,
   "clients": 17,
   "infra": 8,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 1,
    "weakest": null,
-   "uptime": 10586,
+   "uptime": 10664,
    "clients": 1,
    "channel": 149,
    "bw": 20,
@@ -66,7 +66,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.6,
+   "cpu": 4.7,
    "mem": 47.1,
    "airtime": 10,
    "self_use": 1,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 18046,
+   "uptime": 18125,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -98,8 +98,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.4,
-   "mem": 47.6,
+   "cpu": 3.2,
+   "mem": 47.7,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10580,
+   "uptime": 10650,
    "clients": 2,
    "channel": 44,
    "bw": 20,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.0,
+   "cpu": 4.1,
    "mem": 47.6,
-   "airtime": 14,
+   "airtime": 10,
    "self_use": 1,
-   "interference": 13,
-   "tx_retry": 0.0,
+   "interference": 9,
+   "tx_retry": 6.3,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8791,
+   "uptime": 8865,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -194,10 +194,10 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.4,
+   "cpu": 1.5,
    "mem": 46.8,
-   "airtime": 27,
-   "self_use": 2,
+   "airtime": 26,
+   "self_use": 1,
    "interference": 25,
    "tx_retry": 0.0,
    "retry_ok": false,
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8676,
+   "uptime": 8759,
    "clients": 0,
    "channel": 157,
    "bw": 20,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 17893,
+   "uptime": 17964,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 8703,
+   "uptime": 8768,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 11.9,
-   "mem": 47.3,
-   "airtime": 91,
-   "self_use": 90,
-   "interference": 1,
-   "tx_retry": 10.6,
+   "cpu": 12.1,
+   "mem": 47.2,
+   "airtime": 88,
+   "self_use": 88,
+   "interference": 0,
+   "tx_retry": 9.9,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -308,8 +308,8 @@
  "issues": [
   {
    "sev": "crit",
-   "title": "AP 9 空中時間 91%(自身流量佔 90%)",
-   "detail": "3 位用戶掛在這台,90% 是自己的傳輸、只有 1% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "title": "AP 9 空中時間 88%(自身流量佔 88%)",
+   "detail": "3 位用戶掛在這台,88% 是自己的傳輸、只有 0% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
    "fix": "依序執行:1) 若仍不足,在 AP 9 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 9 → 設定 → 無線電。",
    "key": "AP 9 空中時間 #%(自身流量佔 #%)"
   },
@@ -3521,6 +3521,44 @@
     "9": {
      "air": 91,
      "retry": 10.6
+    }
+   }
+  },
+  {
+   "ts": "17:01",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 6,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 10,
+     "retry": 6.3
+    },
+    "6": {
+     "air": 26,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 88,
+     "retry": 9.9
     }
    }
   }
