@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """讀 data.json,產生單檔 HTML 儀表板"""
-import json, os, sys
+import base64, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(HERE, "data.json")))
@@ -284,9 +284,10 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font-variant-numeric:tabular-nums}
 
 /* header */
-.top{display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;
+.top{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
   padding-bottom:16px;border-bottom:1px solid var(--line)}
-.top h1{margin:0;font-size:21px;font-weight:600;letter-spacing:-.01em}
+.top h1{margin:0;font-size:21px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:center}
+.top h1 .logo{height:40px;width:auto;display:block;border-radius:3px}
 .top .site{color:var(--ink3);font-size:13px;margin-left:10px;font-weight:400}
 .stamp{font-size:12.5px;color:var(--ink2);font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 .stamp b{color:var(--ink);font-weight:500}
@@ -424,6 +425,8 @@ h2{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--ink3);
 
 SSID_TXT = (" · SSID " + " / ".join(esc(x) for x in D.get("ssids", []))) if D.get("ssids") else ""
 
+# 左上角 logo:內嵌成 data URI,Pages 只發布 HTML/JSON 也能顯示
+LOGO_B64 = base64.b64encode(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.png"), "rb").read()).decode()
 HTML = f"""<title>{esc(D['site'])}網路戰情室</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -431,7 +434,7 @@ HTML = f"""<title>{esc(D['site'])}網路戰情室</title>
 <style>{CSS}</style>
 <div class="wrap">
   <div class="top">
-    <h1>網路戰情室<span class="site">{esc(D['site'])}{SSID_TXT}</span></h1>
+    <h1><img class="logo" src="data:image/png;base64,{LOGO_B64}" alt="Y Combinator"><span class="site">{esc(D['site'])}{SSID_TXT}</span></h1>
     <div class="stamp">資料時間 <b>{esc(D['ts'])}</b> · 每分鐘更新 · <span id="live">自動重新整理</span></div>
   </div>
 
