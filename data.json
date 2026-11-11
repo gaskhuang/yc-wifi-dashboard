@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11 17:30:22",
+ "ts": "2026-11-11 17:31:27",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,7 +10,7 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 2,
-  "uptime": "3h18m21s",
+  "uptime": "3h19m26s",
   "cpu_temp": 35,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 95.35,
-  "up_mbps": 10.95,
+  "down_mbps": 94.08,
+  "up_mbps": 11.38,
   "leases_bound": 30,
   "clients": 22,
   "infra": 8,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 19868,
+   "uptime": 19943,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -99,7 +99,7 @@
    "min_rssi_on": false,
    "min_rssi": null,
    "cpu": 2.7,
-   "mem": 47.7,
+   "mem": 47.8,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 12381,
+   "uptime": 12446,
    "clients": 2,
    "channel": 44,
    "bw": 20,
@@ -164,10 +164,10 @@
    "min_rssi": null,
    "cpu": 3.6,
    "mem": 47.7,
-   "airtime": 11,
+   "airtime": 14,
    "self_use": 1,
-   "interference": 10,
-   "tx_retry": 0.2,
+   "interference": 13,
+   "tx_retry": 0.8,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10625,
+   "uptime": 10691,
    "clients": 0,
    "channel": 36,
    "bw": 20,
@@ -196,9 +196,9 @@
    "min_rssi": null,
    "cpu": 1.5,
    "mem": 46.9,
-   "airtime": 33,
+   "airtime": 32,
    "self_use": 1,
-   "interference": 32,
+   "interference": 31,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -214,7 +214,7 @@
    "weak": 1,
    "slow": 1,
    "weakest": -81,
-   "uptime": 10521,
+   "uptime": 10587,
    "clients": 2,
    "channel": 157,
    "bw": 20,
@@ -227,11 +227,11 @@
    "min_rssi_on": false,
    "min_rssi": null,
    "cpu": 3.2,
-   "mem": 47.4,
-   "airtime": 6,
-   "self_use": 1,
-   "interference": 5,
-   "tx_retry": 29.7,
+   "mem": 47.5,
+   "airtime": 8,
+   "self_use": 2,
+   "interference": 6,
+   "tx_retry": 25.3,
    "retry_ok": false,
    "up_sw": null,
    "up_port": null,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 19723,
+   "uptime": 19792,
    "clients": 0,
    "channel": 40,
    "bw": 20,
@@ -258,11 +258,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.3,
+   "cpu": 3.6,
    "mem": 47.8,
-   "airtime": 3,
+   "airtime": 2,
    "self_use": 1,
-   "interference": 2,
+   "interference": 1,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": null,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 10522,
+   "uptime": 10600,
    "clients": 3,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.1,
-   "mem": 47.4,
+   "cpu": 4.9,
+   "mem": 47.3,
    "airtime": 12,
-   "self_use": 10,
-   "interference": 2,
-   "tx_retry": 10.9,
+   "self_use": 11,
+   "interference": 1,
+   "tx_retry": 12.1,
    "retry_ok": true,
    "up_sw": null,
    "up_port": null,
@@ -308,7 +308,7 @@
  "issues": [
   {
    "sev": "warn",
-   "title": "AP 6 他源干擾 32%",
+   "title": "AP 6 他源干擾 31%",
    "detail": "ch36 有外部訊號源在佔用空中時間,不是本台造成的。",
    "fix": "把 AP 6 的 5GHz 頻道從 ch36 改成 ch48(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
    "key": "AP 6 他源干擾 #%"
@@ -4578,6 +4578,44 @@
     "9": {
      "air": 12,
      "retry": 10.9
+    }
+   }
+  },
+  {
+   "ts": "17:31",
+   "clients": 7,
+   "ap": {
+    "10": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 14,
+     "retry": 0.8
+    },
+    "6": {
+     "air": 32,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 8,
+     "retry": 25.3
+    },
+    "8": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 12,
+     "retry": 12.1
     }
    }
   }
