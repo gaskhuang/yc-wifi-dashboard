@@ -1,10 +1,7 @@
 {
- "ts": "2026-11-12 18:54:15",
+ "ts": "2026-11-12 18:58:00",
  "site": "YC 松菸",
- "ssids": [
-  "Staff",
-  "Y Combinator"
- ],
+ "ssids": [],
  "mikrotik": null,
  "crs": null,
  "mt_configured": true,
@@ -61,385 +58,34 @@
   }
  ],
  "spares": [],
- "switches": [
-  {
-   "name": "24 poe",
-   "mac": "bcb923807ee6",
-   "ip": "192.168.88.252",
-   "model": "Alta S24-POE · 5/26 埠使用中",
-   "online": false,
-   "at_venue": true,
-   "poe_used": null,
-   "poe_budget": 240.0,
-   "poe_budget_est": false,
-   "poe_pct": null,
-   "temp": null,
-   "ports": [
-    {
-     "idx": 1,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 2,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 3,
-     "ap": null,
-     "label": "RB5009UG(上行)",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 4,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 5,
-     "ap": null,
-     "label": "8poe",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 6,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 7,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 8,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 9,
-     "ap": "5",
-     "label": "5",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 10,
-     "ap": "10",
-     "label": "10",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 11,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 12,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 13,
-     "ap": "7",
-     "label": "7",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 14,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 15,
-     "ap": "6",
-     "label": "6",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 16,
-     "ap": "4",
-     "label": "4",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 17,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 18,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 19,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 20,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 21,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 22,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 23,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 24,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 25,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 26,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    }
-   ]
-  },
-  {
-   "name": "8 poe",
-   "mac": "bcb923803c74",
-   "ip": "192.168.88.248",
-   "model": "Alta S8-POE · 3/8 埠使用中",
-   "online": false,
-   "at_venue": true,
-   "poe_used": null,
-   "poe_budget": 60.0,
-   "poe_budget_est": false,
-   "poe_pct": null,
-   "temp": null,
-   "ports": [
-    {
-     "idx": 1,
-     "ap": "8",
-     "label": "8",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 2,
-     "ap": "2",
-     "label": "2",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 3,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 4,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": true,
-     "poe_w": null
-    },
-    {
-     "idx": 5,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 6,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 7,
-     "ap": null,
-     "label": "",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    },
-    {
-     "idx": 8,
-     "ap": null,
-     "label": "24poe(上行)",
-     "up": null,
-     "speed": null,
-     "poe": false,
-     "poe_w": null
-    }
-   ]
-  }
- ],
+ "switches": [],
  "issues": [
   {
    "sev": "crit",
-   "title": "交換器 24 poe 離線",
-   "detail": "最後位址 192.168.88.252。接在它下面的 AP 5、10、7、6、4 都會跟著斷線。",
-   "fix": "到現場確認交換器電源指示燈;檢查變壓器或 PoE 輸入,以及往 MikroTik 的上行網路線。",
-   "key": "sw_offline:24 poe"
-  },
-  {
-   "sev": "crit",
-   "title": "交換器 8 poe 離線",
-   "detail": "最後位址 192.168.88.248。接在它下面的 AP 8、2 都會跟著斷線。",
-   "fix": "到現場確認交換器電源指示燈;檢查變壓器或 PoE 輸入,以及往 MikroTik 的上行網路線。",
-   "key": "sw_offline:8 poe"
-  },
-  {
-   "sev": "crit",
    "title": "AP 10 離線",
-   "detail": "現役機 192.168.88.246(接在 24 poe 第 10 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 24 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 10 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.246 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 10 即可套用相同設定)。",
    "key": "AP 10 離線"
   },
   {
    "sev": "crit",
    "title": "AP 2 離線",
-   "detail": "現役機 192.168.88.250(接在 8 poe 第 2 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 8 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 2 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.250 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 2 即可套用相同設定)。",
    "key": "AP 2 離線"
   },
   {
    "sev": "crit",
    "title": "AP 4 離線",
-   "detail": "現役機 192.168.88.253(接在 24 poe 第 16 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 24 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 4 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.253 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 4 即可套用相同設定)。",
    "key": "AP 4 離線"
   },
   {
    "sev": "crit",
    "title": "AP 6 離線",
-   "detail": "現役機 192.168.88.251(接在 24 poe 第 15 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 24 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 6 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.251 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 6 即可套用相同設定)。",
    "key": "AP 6 離線"
   },
   {
@@ -452,22 +98,22 @@
   {
    "sev": "crit",
    "title": "AP 8 離線",
-   "detail": "現役機 192.168.88.249(接在 8 poe 第 1 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 8 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 8 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.249 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 8 即可套用相同設定)。",
    "key": "AP 8 離線"
   },
   {
    "sev": "crit",
    "title": "AP 5 離線",
-   "detail": "現役機 192.168.88.247(接在 24 poe 第 9 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 24 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 5 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.247 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 5 即可套用相同設定)。",
    "key": "AP 5 離線"
   },
   {
    "sev": "crit",
    "title": "AP 7 離線",
-   "detail": "現役機 192.168.88.240(接在 24 poe 第 13 埠) 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 上游交換器 24 poe 也離線,先處理交換器:確認電源與上行網路線。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 7 即可套用相同設定)。",
+   "detail": "現役機 192.168.88.240 失聯,該區域目前沒有訊號涵蓋。",
+   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 7 即可套用相同設定)。",
    "key": "AP 7 離線"
   },
   {
@@ -476,53 +122,26 @@
    "detail": "路由器 REST API 沒有回應,DHCP 與對外頻寬狀態無法取得。",
    "fix": "確認路由器是否斷電、對外線路是否中斷。若現場網路正常,多半是 DDNS 還沒更新到新位址:在 RB5009 上執行 /ip cloud force-update。",
    "key": "ccr_down"
+  },
+  {
+   "sev": "warn",
+   "title": "Alta 交換器資料讀不到",
+   "detail": "alta_watch.js 沒有在跑,或超過 3 分鐘沒更新;交換器與 PoE 狀態暫時無法顯示。",
+   "fix": "在 Mac mini 執行 screen -ls 確認 yc-alta 還在,並看 ~/yc-wifi-dashboard/alta.log。",
+   "key": "alta_stale"
   }
  ],
  "summary": {
   "online": 0,
   "offline": 8,
   "spares": 0,
-  "switches": 2,
+  "switches": 0,
   "switches_online": 0,
   "clients": 0,
-  "crit": 11,
-  "warn": 0
+  "crit": 9,
+  "warn": 1
  },
  "history": [
-  {
-   "ts": "15:07",
-   "clients": 109,
-   "ap": {
-    "10": {
-     "air": 30,
-     "retry": 17.5
-    },
-    "2": {
-     "air": 2,
-     "retry": 11.9
-    },
-    "4": {
-     "air": 21,
-     "retry": 10.7
-    },
-    "6": {
-     "air": 11,
-     "retry": 9.9
-    },
-    "7": {
-     "air": 44,
-     "retry": 32.6
-    },
-    "8": {
-     "air": 4,
-     "retry": 14.7
-    },
-    "9": {
-     "air": 18,
-     "retry": 0.0
-    }
-   }
-  },
   {
    "ts": "15:09",
    "clients": 116,
@@ -5869,6 +5488,11 @@
   },
   {
    "ts": "18:54",
+   "clients": 0,
+   "ap": {}
+  },
+  {
+   "ts": "18:58",
    "clients": 0,
    "ap": {}
   }
