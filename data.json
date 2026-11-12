@@ -5927,5 +5927,14 @@
     }
    }
   }
- ]
+ ],
+ "optimize": {
+  "mode": "observe",
+  "watching": 0,
+  "gave_up": 0,
+  "recent": [],
+  "persistent_count": 0,
+  "persistent_by_ap": {},
+  "persistent": []
+ }
 }
