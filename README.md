@@ -13,8 +13,8 @@
 憑證放在 `~/.config/zonetech/yc.env`（`YC_UNIFI_API_KEY`、`YC_NOC_USER`、`YC_NOC_PASS`），不進 repo。
 
 ```bash
-screen -dmS yc bash -c 'cd ~/yc-wifi-dashboard; while true; do echo "=== $(date "+%F %T")" >> loop.log; ZONETECH_SECRETS=~/.config/zonetech/yc.env ./auto-update.sh >> loop.log 2>&1; echo "exit=$?" >> loop.log; sleep 60; done'
-screen -S yc -X quit   # 停止
+screen -dmS yc bash -c 'cd ~/yc-wifi-dashboard; while true; do echo "=== $(date "+%F %T")" >> loop.log; ZONETECH_SECRETS=~/.config/zonetech/yc.env ./auto-update.sh >> loop.log 2>&1; echo "exit=$?" >> loop.log; sleep 180; done'
+screen -S "$(screen -ls | grep -oE "[0-9]+\.yc\b")" -X quit   # 停止(-S yc 會同時對到 yc-alta)
 ```
 
 Alta 收集器（另開一個 screen，需要 `npm install` 與本機 Playwright Chromium）：

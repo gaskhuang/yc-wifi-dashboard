@@ -436,7 +436,7 @@ HTML = f"""<title>{esc(D['site'])}網路戰情室</title>
 <div class="wrap">
   <div class="top">
     <h1><img class="logo" src="data:image/png;base64,{LOGO_B64}" alt="Y Combinator"><span class="site">{esc(D['site'])}{SSID_TXT}</span></h1>
-    <div class="stamp">資料時間 <b>{esc(D['ts'])}</b> · 每分鐘更新 · <span id="live">自動重新整理</span></div>
+    <div class="stamp">資料時間 <b>{esc(D['ts'])}</b> · 每 3 分鐘更新 · <span id="live">自動重新整理</span></div>
   </div>
 
   <div class="verdict {vclass}">
@@ -484,7 +484,7 @@ HTML = f"""<title>{esc(D['site'])}網路戰情室</title>
   </table></div>
 
   <div class="foot">
-    <div><b>資料來源</b> UniFi OS API(m09829.hostifi.com · site {esc(D['site'])})每分鐘擷取一次</div>
+    <div><b>資料來源</b> UniFi OS API(m09829.hostifi.com · site {esc(D['site'])})每 3 分鐘擷取一次</div>
     <div><b>備用機</b> {s['spares']} 台尚未佈署(未用數字編號命名),不列入告警</div>
     <div><b>DFS 說明</b> 頻道 52–144 屬 DFS,偵測到雷達訊號會被迫跳頻造成瞬斷,現場活動建議避開</div>
   </div>
@@ -516,13 +516,13 @@ HTML += """
       if (el) el.textContent = "更新失敗(這台裝置連不上網),稍後重試";
     }).then(function () { clearTimeout(timer); busy = false; });
   }
-  // 資料超過 3 分鐘沒更新就標紅,現場一眼看得出監控是不是停了
+  // 資料超過 7 分鐘(兩輪)沒更新就標紅,現場一眼看得出監控是不是停了
   function checkStale() {
     var b = document.querySelector(".stamp b"), el = document.getElementById("live");
     if (!b || !el) return;
     var t = new Date(b.textContent.trim().replace(" ", "T") + "+08:00");
     var age = (Date.now() - t.getTime()) / 1000;
-    if (age > 180) {
+    if (age > 420) {
       el.textContent = "資料已 " + Math.floor(age / 60) + " 分鐘沒有更新";
       el.style.color = "var(--crit)"; el.style.fontWeight = "600";
     }
@@ -535,7 +535,7 @@ HTML += """
   window.addEventListener("focus", wake);
   window.addEventListener("pageshow", wake);
   window.addEventListener("online", refresh);
-  setInterval(function () { if (Date.now() - last >= 55000) refresh(); }, 15000);
+  setInterval(function () { if (Date.now() - last >= 175000) refresh(); }, 15000);
 })();
 </script>"""
 
