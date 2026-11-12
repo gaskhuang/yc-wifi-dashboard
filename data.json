@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-12 08:06:11",
+ "ts": "2026-11-12 08:07:17",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,8 +10,8 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 0,
-  "uptime": "4m51s",
-  "cpu_temp": 28,
+  "uptime": "5m56s",
+  "cpu_temp": 29,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
   "wan_running": true,
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 0.73,
-  "up_mbps": 0.14,
+  "down_mbps": 5.99,
+  "up_mbps": 0.17,
   "leases_bound": 31,
   "clients": 23,
   "infra": 8,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 223,
+   "uptime": 306,
    "clients": 1,
    "channel": 48,
    "bw": 20,
@@ -66,8 +66,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.5,
-   "mem": 46.1,
+   "cpu": 4.3,
+   "mem": 46.2,
    "airtime": 3,
    "self_use": 1,
    "interference": 2,
@@ -83,11 +83,11 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.250",
-   "weak": 2,
+   "weak": 1,
    "slow": 0,
-   "weakest": -88,
-   "uptime": 36456,
-   "clients": 2,
+   "weakest": -84,
+   "uptime": 36535,
+   "clients": 1,
    "channel": 100,
    "bw": 20,
    "dfs": true,
@@ -98,12 +98,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 2.3,
-   "mem": 48.2,
+   "cpu": 2.7,
+   "mem": 48.0,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
-   "tx_retry": 15.4,
+   "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": "8 poe",
    "up_port": 2,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 223,
+   "uptime": 295,
    "clients": 1,
    "channel": 64,
    "bw": 20,
@@ -130,12 +130,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.3,
-   "mem": 46.1,
-   "airtime": 1,
+   "cpu": 3.5,
+   "mem": 46.3,
+   "airtime": 2,
    "self_use": 1,
-   "interference": 0,
-   "tx_retry": 7.2,
+   "interference": 1,
+   "tx_retry": 7.1,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 16,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 211,
+   "uptime": 285,
    "clients": 4,
    "channel": 44,
    "bw": 20,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.7,
-   "mem": 46.2,
-   "airtime": 8,
-   "self_use": 1,
-   "interference": 7,
-   "tx_retry": 2.3,
+   "cpu": 4.5,
+   "mem": 46.3,
+   "airtime": 10,
+   "self_use": 2,
+   "interference": 8,
+   "tx_retry": 3.5,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 9,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 221,
+   "uptime": 285,
    "clients": 0,
    "channel": 132,
    "bw": 20,
@@ -194,8 +194,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.9,
-   "mem": 46.2,
+   "cpu": 2.1,
+   "mem": 46.1,
    "airtime": 3,
    "self_use": 1,
    "interference": 2,
@@ -211,11 +211,11 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.240",
-   "weak": 0,
+   "weak": 1,
    "slow": 0,
-   "weakest": null,
-   "uptime": 233,
-   "clients": 1,
+   "weakest": -80,
+   "uptime": 319,
+   "clients": 2,
    "channel": 157,
    "bw": 20,
    "dfs": false,
@@ -226,12 +226,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.4,
-   "mem": 46.3,
+   "cpu": 4.3,
+   "mem": 46.2,
    "airtime": 3,
    "self_use": 1,
    "interference": 2,
-   "tx_retry": 0.0,
+   "tx_retry": 9.6,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 13,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 213,
+   "uptime": 295,
    "clients": 1,
    "channel": 165,
    "bw": 20,
@@ -290,13 +290,13 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.8,
+   "cpu": 4.5,
    "mem": 46.2,
-   "airtime": 3,
+   "airtime": 2,
    "self_use": 1,
-   "interference": 2,
-   "tx_retry": 9.3,
-   "retry_ok": false,
+   "interference": 1,
+   "tx_retry": 6.1,
+   "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 12,
    "up_speed": 1000
@@ -312,11 +312,11 @@
    "model": "Alta S24-POE · 8/26 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 44.0,
+   "poe_used": 44.1,
    "poe_budget": 240.0,
    "poe_budget_est": false,
-   "poe_pct": 18.3,
-   "temp": 26.9,
+   "poe_pct": 18.4,
+   "temp": 27.7,
    "ports": [
     {
      "idx": 3,
@@ -343,7 +343,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7
+     "poe_w": 7.3
     },
     {
      "idx": 10,
@@ -352,7 +352,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.6
     },
     {
      "idx": 12,
@@ -370,7 +370,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 7.3
     },
     {
      "idx": 15,
@@ -379,7 +379,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 7.1
     },
     {
      "idx": 16,
@@ -388,7 +388,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 7.3
     }
    ]
   },
@@ -399,10 +399,10 @@
    "model": "Alta S8-POE · 3/8 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 14.9,
+   "poe_used": 14.6,
    "poe_budget": 60.0,
    "poe_budget_est": false,
-   "poe_pct": 24.8,
+   "poe_pct": 24.3,
    "temp": 37.8,
    "ports": [
     {
@@ -412,7 +412,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 7.1
     },
     {
      "idx": 2,
@@ -438,42 +438,42 @@
  "issues": [
   {
    "sev": "info",
-   "title": "AP 10 剛重開機(3 分鐘前)",
+   "title": "AP 10 剛重開機(5 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 10 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 10 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 4 剛重開機(3 分鐘前)",
+   "title": "AP 4 剛重開機(4 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 4 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 4 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 5 剛重開機(3 分鐘前)",
+   "title": "AP 5 剛重開機(4 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 5 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 5 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 6 剛重開機(3 分鐘前)",
+   "title": "AP 6 剛重開機(4 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 6 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 6 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 7 剛重開機(3 分鐘前)",
+   "title": "AP 7 剛重開機(5 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 7 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 7 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 9 剛重開機(3 分鐘前)",
+   "title": "AP 9 剛重開機(4 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 9 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 9 剛重開機(# 分鐘前)"
@@ -490,11 +490,6 @@
   "warn": 0
  },
  "history": [
-  {
-   "ts": "05:32",
-   "clients": 0,
-   "ap": {}
-  },
   {
    "ts": "05:33",
    "clients": 0,
@@ -1339,6 +1334,44 @@
     "9": {
      "air": 3,
      "retry": 9.3
+    }
+   }
+  },
+  {
+   "ts": "08:07",
+   "clients": 11,
+   "ap": {
+    "10": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 2,
+     "retry": 7.1
+    },
+    "5": {
+     "air": 10,
+     "retry": 3.5
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 3,
+     "retry": 9.6
+    },
+    "8": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 2,
+     "retry": 6.1
     }
    }
   }
