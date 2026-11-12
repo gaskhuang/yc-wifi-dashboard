@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-12 09:46:59",
+ "ts": "2026-11-12 09:48:04",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -10,7 +10,7 @@
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
   "cpu": 1,
-  "uptime": "1h45m38s",
+  "uptime": "1h46m44s",
   "cpu_temp": 33,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 12.49,
-  "up_mbps": 6.25,
+  "down_mbps": 3.44,
+  "up_mbps": 5.94,
   "leases_bound": 44,
   "clients": 36,
   "infra": 8,
@@ -54,8 +54,8 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 6265,
-   "clients": 0,
+   "uptime": 6335,
+   "clients": 1,
    "channel": 48,
    "bw": 20,
    "dfs": false,
@@ -66,8 +66,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.2,
-   "mem": 46.9,
+   "cpu": 3.7,
+   "mem": 46.8,
    "airtime": 3,
    "self_use": 1,
    "interference": 2,
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 42514,
+   "uptime": 42604,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -98,7 +98,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.4,
+   "cpu": 1.3,
    "mem": 48.0,
    "airtime": 1,
    "self_use": 1,
@@ -119,7 +119,7 @@
    "slow": 0,
    "weakest": null,
    "uptime": 6324,
-   "clients": 4,
+   "clients": 3,
    "channel": 64,
    "bw": 20,
    "dfs": true,
@@ -147,10 +147,10 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.247",
-   "weak": 0,
+   "weak": 1,
    "slow": 0,
-   "weakest": null,
-   "uptime": 6292,
+   "weakest": -77,
+   "uptime": 6364,
    "clients": 4,
    "channel": 44,
    "bw": 20,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.0,
+   "cpu": 4.7,
    "mem": 47.1,
-   "airtime": 12,
+   "airtime": 9,
    "self_use": 1,
-   "interference": 11,
-   "tx_retry": 5.1,
+   "interference": 8,
+   "tx_retry": 7.0,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 9,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 6304,
+   "uptime": 6374,
    "clients": 1,
    "channel": 132,
    "bw": 20,
@@ -194,12 +194,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.6,
-   "mem": 46.8,
-   "airtime": 4,
+   "cpu": 1.5,
+   "mem": 46.9,
+   "airtime": 3,
    "self_use": 1,
-   "interference": 3,
-   "tx_retry": 22.2,
+   "interference": 2,
+   "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 15,
@@ -212,10 +212,10 @@
    "radio": "wifi1",
    "ip": "192.168.88.240",
    "weak": 0,
-   "slow": 1,
+   "slow": 0,
    "weakest": null,
-   "uptime": 6271,
-   "clients": 5,
+   "uptime": 6352,
+   "clients": 4,
    "channel": 157,
    "bw": 20,
    "dfs": false,
@@ -226,12 +226,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.7,
-   "mem": 47.0,
-   "airtime": 44,
-   "self_use": 3,
-   "interference": 41,
-   "tx_retry": 16.8,
+   "cpu": 3.8,
+   "mem": 47.1,
+   "airtime": 17,
+   "self_use": 1,
+   "interference": 16,
+   "tx_retry": 16.5,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 13,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 42498,
+   "uptime": 42572,
    "clients": 1,
    "channel": 40,
    "bw": 20,
@@ -258,12 +258,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.5,
-   "mem": 48.1,
+   "cpu": 3.3,
+   "mem": 48.2,
    "airtime": 3,
    "self_use": 2,
    "interference": 1,
-   "tx_retry": 7.5,
+   "tx_retry": 8.1,
    "retry_ok": true,
    "up_sw": "8 poe",
    "up_port": 1,
@@ -275,10 +275,10 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.241",
-   "weak": 0,
-   "slow": 0,
-   "weakest": null,
-   "uptime": 6299,
+   "weak": 2,
+   "slow": 1,
+   "weakest": -88,
+   "uptime": 6386,
    "clients": 2,
    "channel": 165,
    "bw": 20,
@@ -292,10 +292,10 @@
    "min_rssi": null,
    "cpu": 5.8,
    "mem": 47.1,
-   "airtime": 12,
+   "airtime": 11,
    "self_use": 10,
-   "interference": 2,
-   "tx_retry": 9.0,
+   "interference": 1,
+   "tx_retry": 9.5,
    "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 12,
@@ -312,11 +312,11 @@
    "model": "Alta S24-POE · 8/26 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 46.3,
+   "poe_used": 48.3,
    "poe_budget": 240.0,
    "poe_budget_est": false,
-   "poe_pct": 19.3,
-   "temp": 33.1,
+   "poe_pct": 20.1,
+   "temp": 33,
    "ports": [
     {
      "idx": 3,
@@ -343,7 +343,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 8.1
+     "poe_w": 7.3
     },
     {
      "idx": 10,
@@ -352,7 +352,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.9
+     "poe_w": 11
     },
     {
      "idx": 12,
@@ -361,7 +361,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.9
+     "poe_w": 7.6
     },
     {
      "idx": 13,
@@ -379,7 +379,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.4
     },
     {
      "idx": 16,
@@ -388,7 +388,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 7.5
     }
    ]
   },
@@ -399,10 +399,10 @@
    "model": "Alta S8-POE · 3/8 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 14.9,
+   "poe_used": 15.0,
    "poe_budget": 60.0,
    "poe_budget_est": false,
-   "poe_pct": 24.8,
+   "poe_pct": 25.0,
    "temp": 37.2,
    "ports": [
     {
@@ -412,7 +412,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 7.5
     },
     {
      "idx": 2,
@@ -421,7 +421,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.7
+     "poe_w": 7.5
     },
     {
      "idx": 8,
@@ -435,31 +435,18 @@
    ]
   }
  ],
- "issues": [
-  {
-   "sev": "crit",
-   "title": "AP 7 他源干擾 41%",
-   "detail": "ch157 有外部訊號源在佔用空中時間,不是本台造成的。",
-   "fix": "把 AP 7 的 5GHz 頻道從 ch157 改成 ch36(目前無人使用)。 若換完仍高,代表整段 5GHz 都被鄰近單位佔用,屬環境限制。",
-   "key": "AP 7 他源干擾 #%"
-  }
- ],
+ "issues": [],
  "summary": {
   "online": 8,
   "offline": 0,
   "spares": 0,
   "switches": 2,
   "switches_online": 2,
-  "clients": 17,
-  "crit": 1,
+  "clients": 16,
+  "crit": 0,
   "warn": 0
  },
  "history": [
-  {
-   "ts": "07:12",
-   "clients": 0,
-   "ap": {}
-  },
   {
    "ts": "07:13",
    "clients": 0,
@@ -4373,6 +4360,44 @@
     "9": {
      "air": 12,
      "retry": 9.0
+    }
+   }
+  },
+  {
+   "ts": "09:48",
+   "clients": 16,
+   "ap": {
+    "10": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 4,
+     "retry": 14.2
+    },
+    "5": {
+     "air": 9,
+     "retry": 7.0
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 17,
+     "retry": 16.5
+    },
+    "8": {
+     "air": 3,
+     "retry": 8.1
+    },
+    "9": {
+     "air": 11,
+     "retry": 9.5
     }
    }
   }
