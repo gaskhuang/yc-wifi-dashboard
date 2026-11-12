@@ -1,152 +1,386 @@
 {
- "ts": "2026-11-12 08:01:51",
+ "ts": "2026-11-12 08:02:57",
  "site": "YC 松菸",
- "ssids": [],
- "mikrotik": null,
+ "ssids": [
+  "Staff",
+  "Y Combinator"
+ ],
+ "mikrotik": {
+  "ok": true,
+  "board": "RB5009UG+S+",
+  "version": "7.24.2 (stable)",
+  "cpu": 8,
+  "uptime": "1m36s",
+  "cpu_temp": 26,
+  "psu_fail": [],
+  "wan_name": "pppoe-out1",
+  "wan_running": true,
+  "wan_members": [
+   "ether1",
+   "pppoe-out1",
+   "pppoe-out2"
+  ],
+  "wans": [
+   {
+    "name": "pppoe-out1",
+    "running": true,
+    "active": true
+   },
+   {
+    "name": "pppoe-out2",
+    "running": true,
+    "active": false
+   }
+  ],
+  "down_mbps": 2.47,
+  "up_mbps": 0.4,
+  "leases_bound": 31,
+  "clients": 23,
+  "infra": 8,
+  "pool_range": "192.168.88.10-192.168.91.254",
+  "pool_capacity": 1013,
+  "pool_used_pct": 3.1
+ },
  "crs": null,
  "mt_configured": true,
  "crs_configured": false,
- "aps": [],
- "offline": [
-  {
-   "name": "2",
-   "mac": "74:f9:2c:4e:da:c8",
-   "ip": "192.168.88.250",
-   "at_venue": true
-  },
+ "aps": [
   {
    "name": "10",
-   "mac": "74:f9:2c:50:04:44",
+   "device": "10",
+   "virtual": false,
+   "radio": "wifi1",
    "ip": "192.168.88.246",
-   "at_venue": true
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 64,
+   "clients": 0,
+   "channel": 48,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 48,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 0.0,
+   "mem": 45.8,
+   "airtime": 3,
+   "self_use": 2,
+   "interference": 1,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "2",
+   "device": "2",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.250",
+   "weak": 2,
+   "slow": 0,
+   "weakest": -86,
+   "uptime": 36285,
+   "clients": 2,
+   "channel": 100,
+   "bw": 20,
+   "dfs": true,
+   "cfg_channel": 100,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 1.5,
+   "mem": 48.1,
+   "airtime": 4,
+   "self_use": 4,
+   "interference": 0,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
   },
   {
    "name": "4",
-   "mac": "8c:ed:e1:90:df:40",
+   "device": "4",
+   "virtual": false,
+   "radio": "wifi1",
    "ip": "192.168.88.253",
-   "at_venue": true
-  },
-  {
-   "name": "6",
-   "mac": "74:f9:2c:50:e7:1c",
-   "ip": "192.168.88.251",
-   "at_venue": true
-  },
-  {
-   "name": "9",
-   "mac": "74:f9:2c:50:20:88",
-   "ip": "192.168.88.241",
-   "at_venue": true
-  },
-  {
-   "name": "8",
-   "mac": "74:f9:2c:4e:f0:60",
-   "ip": "192.168.88.249",
-   "at_venue": true
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 67,
+   "clients": 0,
+   "channel": 64,
+   "bw": 20,
+   "dfs": true,
+   "cfg_channel": 64,
+   "radio_state": "DFS_WAIT",
+   "tx_power": 0,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 0.0,
+   "mem": 45.7,
+   "airtime": 0,
+   "self_use": 0,
+   "interference": 0,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
   },
   {
    "name": "5",
-   "mac": "8c:ed:e1:90:91:94",
+   "device": "5",
+   "virtual": false,
+   "radio": "wifi1",
    "ip": "192.168.88.247",
-   "at_venue": true
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 66,
+   "clients": 2,
+   "channel": 44,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 44,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 0.0,
+   "mem": 45.9,
+   "airtime": 7,
+   "self_use": 2,
+   "interference": 5,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "6",
+   "device": "6",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.251",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 65,
+   "clients": 0,
+   "channel": 132,
+   "bw": 20,
+   "dfs": true,
+   "cfg_channel": 132,
+   "radio_state": "DFS_WAIT",
+   "tx_power": 0,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 0.0,
+   "mem": 44.5,
+   "airtime": 0,
+   "self_use": 0,
+   "interference": 0,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
   },
   {
    "name": "7",
-   "mac": "74:f9:2c:50:10:38",
+   "device": "7",
+   "virtual": false,
+   "radio": "wifi1",
    "ip": "192.168.88.240",
-   "at_venue": true
+   "weak": 1,
+   "slow": 0,
+   "weakest": -79,
+   "uptime": 66,
+   "clients": 0,
+   "channel": 157,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 157,
+   "radio_state": "RUN",
+   "tx_power": 26,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 0.0,
+   "mem": 45.9,
+   "airtime": 3,
+   "self_use": 1,
+   "interference": 2,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "8",
+   "device": "8",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.249",
+   "weak": 2,
+   "slow": 0,
+   "weakest": -84,
+   "uptime": 36286,
+   "clients": 2,
+   "channel": 40,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 40,
+   "radio_state": "RUN",
+   "tx_power": 24,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 1.7,
+   "mem": 48.0,
+   "airtime": 10,
+   "self_use": 8,
+   "interference": 2,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
+  },
+  {
+   "name": "9",
+   "device": "9",
+   "virtual": false,
+   "radio": "wifi1",
+   "ip": "192.168.88.241",
+   "weak": 0,
+   "slow": 0,
+   "weakest": null,
+   "uptime": 63,
+   "clients": 0,
+   "channel": 165,
+   "bw": 20,
+   "dfs": false,
+   "cfg_channel": 165,
+   "radio_state": "RUN",
+   "tx_power": 26,
+   "tx_power_mode": "auto",
+   "max_txpower": 26,
+   "min_rssi_on": false,
+   "min_rssi": null,
+   "cpu": 0.0,
+   "mem": 45.4,
+   "airtime": 1,
+   "self_use": 1,
+   "interference": 0,
+   "tx_retry": 0.0,
+   "retry_ok": false,
+   "up_sw": null,
+   "up_port": null,
+   "up_speed": 1000
   }
  ],
+ "offline": [],
  "spares": [],
  "switches": [],
  "issues": [
-  {
-   "sev": "crit",
-   "title": "AP 2 離線",
-   "detail": "現役機 192.168.88.250 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 2 即可套用相同設定)。",
-   "key": "AP 2 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 10 離線",
-   "detail": "現役機 192.168.88.246 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 10 即可套用相同設定)。",
-   "key": "AP 10 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 4 離線",
-   "detail": "現役機 192.168.88.253 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 4 即可套用相同設定)。",
-   "key": "AP 4 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 6 離線",
-   "detail": "現役機 192.168.88.251 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 6 即可套用相同設定)。",
-   "key": "AP 6 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 9 離線",
-   "detail": "現役機 192.168.88.241 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 9 即可套用相同設定)。",
-   "key": "AP 9 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 8 離線",
-   "detail": "現役機 192.168.88.249 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 8 即可套用相同設定)。",
-   "key": "AP 8 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 5 離線",
-   "detail": "現役機 192.168.88.247 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 5 即可套用相同設定)。",
-   "key": "AP 5 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "AP 7 離線",
-   "detail": "現役機 192.168.88.240 失聯,該區域目前沒有訊號涵蓋。",
-   "fix": "1) 檢查該台接的 PoE switch 埠是否供電、網路線是否鬆脫。 2) 若確認硬體故障,拿備用機更換(備用機已在控制器中,接上後改名為 7 即可套用相同設定)。",
-   "key": "AP 7 離線"
-  },
-  {
-   "sev": "crit",
-   "title": "MikroTik RB5009 無法連線",
-   "detail": "路由器 REST API 沒有回應,DHCP 與對外頻寬狀態無法取得。",
-   "fix": "確認路由器是否斷電、對外線路是否中斷。若現場網路正常,多半是 DDNS 還沒更新到新位址:在 RB5009 上執行 /ip cloud force-update。",
-   "key": "ccr_down"
-  },
   {
    "sev": "warn",
    "title": "Alta 交換器資料讀不到",
    "detail": "alta_watch.js 沒有在跑,或超過 3 分鐘沒更新;交換器與 PoE 狀態暫時無法顯示。",
    "fix": "在 Mac mini 執行 screen -ls 確認 yc-alta 還在,並看 ~/yc-wifi-dashboard/alta.log。",
    "key": "alta_stale"
+  },
+  {
+   "sev": "info",
+   "title": "AP 10 剛重開機(1 分鐘前)",
+   "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
+   "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 10 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
+   "key": "AP 10 剛重開機(# 分鐘前)"
+  },
+  {
+   "sev": "info",
+   "title": "AP 4 正在 DFS 頻道 ch64 偵測雷達(約 60 秒)",
+   "detail": "切到 DFS 頻道後要先靜默偵測雷達才會開始發射,這段時間這台沒有訊號。",
+   "fix": "等 1–2 分鐘即可,超過 5 分鐘仍沒恢復再處理。",
+   "key": "dfs-cac-4"
+  },
+  {
+   "sev": "info",
+   "title": "AP 4 剛重開機(1 分鐘前)",
+   "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
+   "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 4 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
+   "key": "AP 4 剛重開機(# 分鐘前)"
+  },
+  {
+   "sev": "info",
+   "title": "AP 5 剛重開機(1 分鐘前)",
+   "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
+   "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 5 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
+   "key": "AP 5 剛重開機(# 分鐘前)"
+  },
+  {
+   "sev": "info",
+   "title": "AP 6 正在 DFS 頻道 ch132 偵測雷達(約 60 秒)",
+   "detail": "切到 DFS 頻道後要先靜默偵測雷達才會開始發射,這段時間這台沒有訊號。",
+   "fix": "等 1–2 分鐘即可,超過 5 分鐘仍沒恢復再處理。",
+   "key": "dfs-cac-6"
+  },
+  {
+   "sev": "info",
+   "title": "AP 6 剛重開機(1 分鐘前)",
+   "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
+   "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 6 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
+   "key": "AP 6 剛重開機(# 分鐘前)"
+  },
+  {
+   "sev": "info",
+   "title": "AP 7 剛重開機(1 分鐘前)",
+   "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
+   "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 7 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
+   "key": "AP 7 剛重開機(# 分鐘前)"
+  },
+  {
+   "sev": "info",
+   "title": "AP 9 剛重開機(1 分鐘前)",
+   "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
+   "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 9 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
+   "key": "AP 9 剛重開機(# 分鐘前)"
   }
  ],
  "summary": {
-  "online": 0,
-  "offline": 8,
+  "online": 8,
+  "offline": 0,
   "spares": 0,
   "switches": 0,
   "switches_online": 0,
-  "clients": 0,
-  "crit": 9,
+  "clients": 6,
+  "crit": 0,
   "warn": 1
  },
  "history": [
-  {
-   "ts": "05:28",
-   "clients": 0,
-   "ap": {}
-  },
   {
    "ts": "05:29",
    "clients": 0,
@@ -861,6 +1095,44 @@
    "ts": "08:01",
    "clients": 0,
    "ap": {}
+  },
+  {
+   "ts": "08:02",
+   "clients": 6,
+   "ap": {
+    "10": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 0,
+     "retry": 0.0
+    },
+    "5": {
+     "air": 7,
+     "retry": 0.0
+    },
+    "6": {
+     "air": 0,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "8": {
+     "air": 10,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 1,
+     "retry": 0.0
+    }
+   }
   }
  ],
  "optimize": {
