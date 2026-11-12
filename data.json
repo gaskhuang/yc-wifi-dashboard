@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-12 16:24:20",
+ "ts": "2026-11-12 16:24:23",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,8 +9,8 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 6,
-  "uptime": "8h22m59s",
+  "cpu": 4,
+  "uptime": "8h23m2s",
   "cpu_temp": 33,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 101.1,
-  "up_mbps": 27.7,
+  "down_mbps": 73.71,
+  "up_mbps": 43.72,
   "leases_bound": 292,
   "clients": 284,
   "infra": 8,
@@ -483,44 +483,6 @@
   "warn": 5
  },
  "history": [
-  {
-   "ts": "14:13",
-   "clients": 107,
-   "ap": {
-    "10": {
-     "air": 14,
-     "retry": 0.0
-    },
-    "2": {
-     "air": 1,
-     "retry": 0.0
-    },
-    "4": {
-     "air": 63,
-     "retry": 5.0
-    },
-    "5": {
-     "air": 53,
-     "retry": 8.5
-    },
-    "6": {
-     "air": 9,
-     "retry": 23.6
-    },
-    "7": {
-     "air": 22,
-     "retry": 12.7
-    },
-    "8": {
-     "air": 5,
-     "retry": 9.9
-    },
-    "9": {
-     "air": 27,
-     "retry": 12.6
-    }
-   }
-  },
   {
    "ts": "14:14",
    "clients": 110,
@@ -5882,6 +5844,44 @@
     "8": {
      "air": 4,
      "retry": 10.3
+    },
+    "9": {
+     "air": 48,
+     "retry": 11.0
+    }
+   }
+  },
+  {
+   "ts": "16:24",
+   "clients": 122,
+   "ap": {
+    "10": {
+     "air": 13,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 37,
+     "retry": 7.1
+    },
+    "5": {
+     "air": 18,
+     "retry": 13.8
+    },
+    "6": {
+     "air": 3,
+     "retry": 18.2
+    },
+    "7": {
+     "air": 23,
+     "retry": 14.7
+    },
+    "8": {
+     "air": 30,
+     "retry": 9.9
     },
     "9": {
      "air": 48,
