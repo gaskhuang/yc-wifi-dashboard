@@ -23,3 +23,4 @@ alta.json
 alta.json.tmp
 alta.log
 .last_nas
+logs/ap*-watch.err
