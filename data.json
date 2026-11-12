@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-12 08:08:21",
+ "ts": "2026-11-12 08:09:27",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,9 +9,9 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 2,
-  "uptime": "7m1s",
-  "cpu_temp": 29,
+  "cpu": 4,
+  "uptime": "8m6s",
+  "cpu_temp": 30,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
   "wan_running": true,
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 230.16,
-  "up_mbps": 1.41,
+  "down_mbps": 310.48,
+  "up_mbps": 2.02,
   "leases_bound": 31,
   "clients": 23,
   "infra": 8,
@@ -54,8 +54,8 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 392,
-   "clients": 1,
+   "uptime": 460,
+   "clients": 2,
    "channel": 48,
    "bw": 20,
    "dfs": false,
@@ -66,8 +66,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.0,
-   "mem": 46.2,
+   "cpu": 3.6,
+   "mem": 46.1,
    "airtime": 3,
    "self_use": 1,
    "interference": 2,
@@ -83,11 +83,11 @@
    "virtual": false,
    "radio": "wifi1",
    "ip": "192.168.88.250",
-   "weak": 1,
+   "weak": 0,
    "slow": 0,
-   "weakest": -84,
-   "uptime": 36606,
-   "clients": 1,
+   "weakest": null,
+   "uptime": 36670,
+   "clients": 0,
    "channel": 100,
    "bw": 20,
    "dfs": true,
@@ -98,8 +98,8 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.6,
-   "mem": 48.1,
+   "cpu": 1.4,
+   "mem": 48.0,
    "airtime": 1,
    "self_use": 1,
    "interference": 0,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 358,
+   "uptime": 446,
    "clients": 1,
    "channel": 64,
    "bw": 20,
@@ -130,12 +130,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.6,
-   "mem": 46.2,
-   "airtime": 17,
-   "self_use": 16,
-   "interference": 1,
-   "tx_retry": 5.5,
+   "cpu": 12.2,
+   "mem": 46.1,
+   "airtime": 82,
+   "self_use": 78,
+   "interference": 4,
+   "tx_retry": 5.7,
    "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 16,
@@ -150,8 +150,8 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 349,
-   "clients": 4,
+   "uptime": 435,
+   "clients": 5,
    "channel": 44,
    "bw": 20,
    "dfs": false,
@@ -162,13 +162,13 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.1,
-   "mem": 46.3,
-   "airtime": 9,
-   "self_use": 2,
-   "interference": 7,
-   "tx_retry": 9.5,
-   "retry_ok": false,
+   "cpu": 5.5,
+   "mem": 46.4,
+   "airtime": 82,
+   "self_use": 76,
+   "interference": 6,
+   "tx_retry": 5.6,
+   "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 9,
    "up_speed": 1000
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 360,
+   "uptime": 436,
    "clients": 0,
    "channel": 132,
    "bw": 20,
@@ -194,7 +194,7 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 2.8,
+   "cpu": 2.4,
    "mem": 46.2,
    "airtime": 3,
    "self_use": 1,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 1,
    "weakest": null,
-   "uptime": 36574,
+   "uptime": 36643,
    "clients": 1,
    "channel": 40,
    "bw": 20,
@@ -258,10 +258,10 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 2.4,
-   "mem": 47.9,
-   "airtime": 1,
-   "self_use": 1,
+   "cpu": 2.0,
+   "mem": 48.0,
+   "airtime": 2,
+   "self_use": 2,
    "interference": 0,
    "tx_retry": 0.0,
    "retry_ok": false,
@@ -278,7 +278,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 375,
+   "uptime": 459,
    "clients": 1,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 6.1,
-   "mem": 46.2,
-   "airtime": 3,
-   "self_use": 2,
+   "cpu": 8.0,
+   "mem": 46.3,
+   "airtime": 75,
+   "self_use": 74,
    "interference": 1,
-   "tx_retry": 7.0,
+   "tx_retry": 10.9,
    "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 12,
@@ -312,11 +312,11 @@
    "model": "Alta S24-POE · 8/26 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 50.2,
+   "poe_used": 56.5,
    "poe_budget": 240.0,
    "poe_budget_est": false,
-   "poe_pct": 20.9,
-   "temp": 28.6,
+   "poe_pct": 23.5,
+   "temp": 29.3,
    "ports": [
     {
      "idx": 3,
@@ -343,7 +343,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 9.6
     },
     {
      "idx": 10,
@@ -352,7 +352,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.6
+     "poe_w": 7.5
     },
     {
      "idx": 12,
@@ -361,7 +361,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 10.9
+     "poe_w": 11.6
     },
     {
      "idx": 13,
@@ -370,7 +370,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.4
+     "poe_w": 10.2
     },
     {
      "idx": 15,
@@ -379,7 +379,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.5
+     "poe_w": 7.1
     },
     {
      "idx": 16,
@@ -388,7 +388,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 9.6
+     "poe_w": 10.5
     }
    ]
   },
@@ -399,10 +399,10 @@
    "model": "Alta S8-POE · 3/8 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 14.9,
+   "poe_used": 14.8,
    "poe_budget": 60.0,
    "poe_budget_est": false,
-   "poe_pct": 24.8,
+   "poe_pct": 24.7,
    "temp": 37.8,
    "ports": [
     {
@@ -421,7 +421,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.6
+     "poe_w": 7.5
     },
     {
      "idx": 8,
@@ -438,35 +438,56 @@
  "issues": [
   {
    "sev": "crit",
+   "title": "AP 4 空中時間 82%(自身流量佔 78%)",
+   "detail": "1 位用戶掛在這台,78% 是自己的傳輸、只有 4% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "fix": "依序執行:1) 若仍不足,在 AP 4 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 4 → 設定 → 無線電。",
+   "key": "AP 4 空中時間 #%(自身流量佔 #%)"
+  },
+  {
+   "sev": "crit",
+   "title": "AP 5 空中時間 82%(自身流量佔 76%)",
+   "detail": "5 位用戶掛在這台,76% 是自己的傳輸、只有 6% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "fix": "依序執行:1) 先把 AP 10 從 ch48 移到 ch36 空出頻道,再把 AP 5 頻寬改成 40MHz(ch44+ch48),容量加倍(注意:AP 10 目前有 2 人,會瞬斷一次)。 2) 若仍不足,在 AP 5 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 5 → 設定 → 無線電。",
+   "key": "AP 5 空中時間 #%(自身流量佔 #%)"
+  },
+  {
+   "sev": "crit",
    "title": "AP 7 空中時間 75%(自身流量佔 73%)",
    "detail": "2 位用戶掛在這台,73% 是自己的傳輸、只有 2% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
    "fix": "依序執行:1) 把 AP 7 的 5GHz 頻寬從 20MHz 改成 40MHz(ch157 會綁定 ch161,目前無人使用),可用容量加倍。 2) 若仍不足,在 AP 7 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 7 → 設定 → 無線電。",
    "key": "AP 7 空中時間 #%(自身流量佔 #%)"
   },
   {
+   "sev": "crit",
+   "title": "AP 9 空中時間 75%(自身流量佔 74%)",
+   "detail": "1 位用戶掛在這台,74% 是自己的傳輸、只有 1% 是外部干擾。與會者坐定不移動,代表人就是集中在這台涵蓋的座位區,換頻道與降功率都沒有幫助。",
+   "fix": "依序執行:1) 若仍不足,在 AP 9 涵蓋的座位區加掛一台備用機分攤(現有 0 台備用機可用),這是固定座位場地唯一能真正加容量的做法。 路徑:UniFi → 裝置 → AP 9 → 設定 → 無線電。",
+   "key": "AP 9 空中時間 #%(自身流量佔 #%)"
+  },
+  {
    "sev": "info",
-   "title": "AP 10 剛重開機(6 分鐘前)",
+   "title": "AP 10 剛重開機(7 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 10 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 10 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 4 剛重開機(5 分鐘前)",
+   "title": "AP 4 剛重開機(7 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 4 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 4 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 5 剛重開機(5 分鐘前)",
+   "title": "AP 5 剛重開機(7 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 5 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 5 剛重開機(# 分鐘前)"
   },
   {
    "sev": "info",
-   "title": "AP 6 剛重開機(6 分鐘前)",
+   "title": "AP 6 剛重開機(7 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 6 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 6 剛重開機(# 分鐘前)"
@@ -480,7 +501,7 @@
   },
   {
    "sev": "info",
-   "title": "AP 9 剛重開機(6 分鐘前)",
+   "title": "AP 9 剛重開機(7 分鐘前)",
    "detail": "剛套用設定變更會重啟屬正常;若無人調整則是異常重啟。",
    "fix": "若近期沒有改過設定,到 UniFi → 裝置 → AP 9 → 洞察 查看重啟原因,並確認 PoE 供電是否穩定。",
    "key": "AP 9 剛重開機(# 分鐘前)"
@@ -492,16 +513,11 @@
   "spares": 0,
   "switches": 2,
   "switches_online": 2,
-  "clients": 11,
-  "crit": 1,
+  "clients": 12,
+  "crit": 4,
   "warn": 0
  },
  "history": [
-  {
-   "ts": "05:34",
-   "clients": 0,
-   "ap": {}
-  },
   {
    "ts": "05:35",
    "clients": 0,
@@ -1412,6 +1428,44 @@
     "9": {
      "air": 3,
      "retry": 7.0
+    }
+   }
+  },
+  {
+   "ts": "08:09",
+   "clients": 12,
+   "ap": {
+    "10": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 82,
+     "retry": 5.7
+    },
+    "5": {
+     "air": 82,
+     "retry": 5.6
+    },
+    "6": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 75,
+     "retry": 8.2
+    },
+    "8": {
+     "air": 2,
+     "retry": 0.0
+    },
+    "9": {
+     "air": 75,
+     "retry": 10.9
     }
    }
   }
