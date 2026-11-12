@@ -39,7 +39,7 @@ def unifi(path, body=None):
                                  headers={"X-API-KEY": API_KEY, "Content-Type": "application/json"},
                                  method="POST" if body is not None else "GET")
     with urllib.request.urlopen(req, context=ctx, timeout=60) as r:
-        return json.loads(r.read().decode())
+        return json.loads(r.read().decode("utf-8", "replace"))
 
 
 def ccr(path):
@@ -48,7 +48,7 @@ def ccr(path):
         try:
             req = urllib.request.Request(base + path, headers={"Authorization": auth})
             with urllib.request.urlopen(req, timeout=15) as r:
-                return json.loads(r.read().decode())
+                return json.loads(r.read().decode("utf-8", "replace"))
         except Exception:
             continue
     return None

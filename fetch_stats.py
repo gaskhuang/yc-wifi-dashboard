@@ -57,7 +57,7 @@ def call(path, payload=None):
         try:
             with opener.open(req, timeout=30) as r:
                 _csrf = r.headers.get("X-CSRF-Token") or _csrf
-                return json.loads(r.read().decode())
+                return json.loads(r.read().decode("utf-8", "replace"))
         except urllib.error.HTTPError as e:
             if e.code < 500 or attempt == 2:
                 raise
@@ -115,7 +115,8 @@ def ros_client(hosts):
                 headers={"Authorization": auth, "Content-Type": "application/json"},
                 method="POST" if body is not None else "GET")
             with urllib.request.urlopen(req, timeout=10) as r:
-                return json.loads(r.read().decode())
+                # 用戶裝置名稱可能不是 UTF-8(例如 Big5),壞字元換成 �,不讓整輪失敗
+                return json.loads(r.read().decode("utf-8", "replace"))
         return q
 
     for base in hosts:
