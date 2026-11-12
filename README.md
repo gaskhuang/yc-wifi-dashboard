@@ -22,3 +22,5 @@ Alta 收集器（另開一個 screen，需要 `npm install` 與本機 Playwright
 ```bash
 screen -dmS yc-alta bash -c 'cd ~/yc-wifi-dashboard; set -a; . ~/.config/zonetech/yc.env; set +a; while true; do node alta_watch.js >> alta.log 2>&1; sleep 10; done'
 ```
+
+> ⚠ macOS 上 `screen -X quit` 不會結束裡面的迴圈程式（會變孤兒繼續跑）。停止或重啟前，先用 `ps -eo pid,ppid,command | grep -E "auto-update|ap_watch|client_watch|alta_watch|while true"` 找出來 `kill`，確認只剩一份。
