@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-12 10:04:19",
+ "ts": "2026-11-12 10:05:24",
  "site": "YC 松菸",
  "ssids": [
   "Staff",
@@ -9,9 +9,9 @@
   "ok": true,
   "board": "RB5009UG+S+",
   "version": "7.24.2 (stable)",
-  "cpu": 1,
-  "uptime": "2h2m59s",
-  "cpu_temp": 32,
+  "cpu": 0,
+  "uptime": "2h4m3s",
+  "cpu_temp": 33,
   "psu_fail": [],
   "wan_name": "pppoe-out1",
   "wan_running": true,
@@ -32,8 +32,8 @@
     "active": false
    }
   ],
-  "down_mbps": 7.78,
-  "up_mbps": 1.85,
+  "down_mbps": 31.19,
+  "up_mbps": 1.86,
   "leases_bound": 46,
   "clients": 38,
   "infra": 8,
@@ -54,7 +54,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7342,
+   "uptime": 7406,
    "clients": 0,
    "channel": 48,
    "bw": 20,
@@ -66,11 +66,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.4,
+   "cpu": 3.2,
    "mem": 46.9,
-   "airtime": 6,
-   "self_use": 2,
-   "interference": 4,
+   "airtime": 3,
+   "self_use": 1,
+   "interference": 2,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": "24 poe",
@@ -86,7 +86,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 43545,
+   "uptime": 43613,
    "clients": 0,
    "channel": 100,
    "bw": 20,
@@ -118,7 +118,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7319,
+   "uptime": 7386,
    "clients": 3,
    "channel": 64,
    "bw": 20,
@@ -130,12 +130,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 3.6,
-   "mem": 47.0,
-   "airtime": 4,
-   "self_use": 2,
-   "interference": 2,
-   "tx_retry": 0.3,
+   "cpu": 3.2,
+   "mem": 47.1,
+   "airtime": 5,
+   "self_use": 1,
+   "interference": 4,
+   "tx_retry": 10.1,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 16,
@@ -150,7 +150,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7307,
+   "uptime": 7383,
    "clients": 3,
    "channel": 44,
    "bw": 20,
@@ -162,12 +162,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.8,
+   "cpu": 4.7,
    "mem": 47.1,
-   "airtime": 52,
-   "self_use": 1,
-   "interference": 51,
-   "tx_retry": 3.7,
+   "airtime": 15,
+   "self_use": 2,
+   "interference": 13,
+   "tx_retry": 5.7,
    "retry_ok": false,
    "up_sw": "24 poe",
    "up_port": 9,
@@ -182,7 +182,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7323,
+   "uptime": 7394,
    "clients": 1,
    "channel": 132,
    "bw": 20,
@@ -194,11 +194,11 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 1.5,
+   "cpu": 1.4,
    "mem": 46.9,
-   "airtime": 3,
+   "airtime": 4,
    "self_use": 1,
-   "interference": 2,
+   "interference": 3,
    "tx_retry": 0.0,
    "retry_ok": false,
    "up_sw": "24 poe",
@@ -214,7 +214,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 7294,
+   "uptime": 7383,
    "clients": 6,
    "channel": 157,
    "bw": 20,
@@ -226,12 +226,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 4.1,
-   "mem": 47.2,
+   "cpu": 3.9,
+   "mem": 47.3,
    "airtime": 8,
    "self_use": 2,
    "interference": 6,
-   "tx_retry": 23.2,
+   "tx_retry": 19.0,
    "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 13,
@@ -246,7 +246,7 @@
    "weak": 0,
    "slow": 0,
    "weakest": null,
-   "uptime": 43560,
+   "uptime": 43628,
    "clients": 1,
    "channel": 40,
    "bw": 20,
@@ -260,11 +260,11 @@
    "min_rssi": null,
    "cpu": 3.1,
    "mem": 48.1,
-   "airtime": 3,
+   "airtime": 4,
    "self_use": 2,
-   "interference": 1,
-   "tx_retry": 4.4,
-   "retry_ok": false,
+   "interference": 2,
+   "tx_retry": 4.0,
+   "retry_ok": true,
    "up_sw": "8 poe",
    "up_port": 1,
    "up_speed": 1000
@@ -278,7 +278,7 @@
    "weak": 1,
    "slow": 0,
    "weakest": -90,
-   "uptime": 7307,
+   "uptime": 7383,
    "clients": 2,
    "channel": 165,
    "bw": 20,
@@ -290,12 +290,12 @@
    "max_txpower": 26,
    "min_rssi_on": false,
    "min_rssi": null,
-   "cpu": 5.0,
-   "mem": 47.3,
+   "cpu": 4.6,
+   "mem": 47.2,
    "airtime": 7,
-   "self_use": 6,
-   "interference": 1,
-   "tx_retry": 12.8,
+   "self_use": 5,
+   "interference": 2,
+   "tx_retry": 13.7,
    "retry_ok": true,
    "up_sw": "24 poe",
    "up_port": 12,
@@ -312,10 +312,10 @@
    "model": "Alta S24-POE · 8/26 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 45.2,
+   "poe_used": 44.6,
    "poe_budget": 240.0,
    "poe_budget_est": false,
-   "poe_pct": 18.8,
+   "poe_pct": 18.6,
    "temp": 32.8,
    "ports": [
     {
@@ -343,7 +343,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.3
+     "poe_w": 7.1
     },
     {
      "idx": 10,
@@ -361,7 +361,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.7
+     "poe_w": 7.4
     },
     {
      "idx": 13,
@@ -370,7 +370,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.6
+     "poe_w": 7.5
     },
     {
      "idx": 15,
@@ -399,11 +399,11 @@
    "model": "Alta S8-POE · 3/8 埠使用中",
    "online": true,
    "at_venue": true,
-   "poe_used": 14.9,
+   "poe_used": 14.6,
    "poe_budget": 60.0,
    "poe_budget_est": false,
-   "poe_pct": 24.8,
-   "temp": 36.8,
+   "poe_pct": 24.3,
+   "temp": 37.2,
    "ports": [
     {
      "idx": 1,
@@ -412,7 +412,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.2
+     "poe_w": 7
     },
     {
      "idx": 2,
@@ -421,7 +421,7 @@
      "up": true,
      "speed": 1000,
      "poe": true,
-     "poe_w": 7.7
+     "poe_w": 7.6
     },
     {
      "idx": 8,
@@ -435,22 +435,7 @@
    ]
   }
  ],
- "issues": [
-  {
-   "sev": "warn",
-   "title": "AP 5 空中時間 52%(外部干擾佔 51%)",
-   "detail": "只有 1% 是自身流量,其餘為外部訊號佔用,ch44 這個頻道環境很髒。",
-   "fix": "把 AP 5 的 5GHz 頻道從 ch44 改成 ch36(目前無人使用)。 路徑:UniFi → 裝置 → AP 5 → 設定 → 無線電 → 5 GHz 頻道。",
-   "key": "AP 5 空中時間 #%(外部干擾佔 #%)"
-  },
-  {
-   "sev": "warn",
-   "title": "AP 7 TX 重試 23.2%",
-   "detail": "每 100 個封包有 23 個要重送。這台目前有 0 位用戶訊號低於 -75 dBm,座位離 AP 太遠是主因。",
-   "fix": "確認 AP 7 涵蓋的座位區有無死角(牆柱遮蔽、AP 被布幔擋住)。與會者不會移動,唯一解是把 AP 移近人群或在該區補一台,不要用降功率的方式處理。",
-   "key": "AP 7 TX 重試 #%"
-  }
- ],
+ "issues": [],
  "summary": {
   "online": 8,
   "offline": 0,
@@ -459,14 +444,9 @@
   "switches_online": 2,
   "clients": 16,
   "crit": 0,
-  "warn": 2
+  "warn": 0
  },
  "history": [
-  {
-   "ts": "07:29",
-   "clients": 0,
-   "ap": {}
-  },
   {
    "ts": "07:30",
    "clients": 0,
@@ -4908,6 +4888,44 @@
     "9": {
      "air": 7,
      "retry": 12.8
+    }
+   }
+  },
+  {
+   "ts": "10:05",
+   "clients": 16,
+   "ap": {
+    "10": {
+     "air": 3,
+     "retry": 0.0
+    },
+    "2": {
+     "air": 1,
+     "retry": 0.0
+    },
+    "4": {
+     "air": 5,
+     "retry": 10.1
+    },
+    "5": {
+     "air": 15,
+     "retry": 5.7
+    },
+    "6": {
+     "air": 4,
+     "retry": 0.0
+    },
+    "7": {
+     "air": 8,
+     "retry": 19.0
+    },
+    "8": {
+     "air": 4,
+     "retry": 4.0
+    },
+    "9": {
+     "air": 7,
+     "retry": 13.7
     }
    }
   }
