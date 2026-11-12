@@ -3,7 +3,7 @@
 
 用法:python3 ap_watch.py 2        # 追蹤 AP 2
   - 快照  → logs/ap<名>-日期.jsonl(跟 logs/ 一起同步到 NAS)
-  - 事件  → logs/ap<名>-events.log(連上/離開、訊號弱、滿意度低、速率低、AP 本身異常;每 15 分鐘一行摘要)
+  - 事件  → logs/ap<名>-events.log(連上/離開、訊號弱、滿意度低、速率低、AP 本身異常;預設每 3 分鐘一行摘要(AP_WATCH_SUMMARY 秒))
 UniFi 本機帳號讀 ~/.unifi-monitor.yaml(同 unifi-monitor),只讀不寫。
 """
 import json, os, sys, time
@@ -13,6 +13,7 @@ import httpx, yaml
 AP = sys.argv[1] if len(sys.argv) > 1 else "2"
 SITE = "x9ajowek"
 EVERY = 60
+SUMMARY_EVERY = int(os.environ.get("AP_WATCH_SUMMARY", "180"))   # 摘要間隔(秒)
 WEAK_DBM, LOW_SAT, LOW_RATE = -75, 80, 12      # 與儀表板判讀一致
 RADIO_RETRY, RADIO_AIR = 20, 60
 TPE = timezone(timedelta(hours=8))
@@ -76,6 +77,7 @@ def main():
     api.login()
     seen, bad, radio_bad = {}, {}, set()
     last_summary = 0
+    joined = left = 0
     event("開始追蹤")
     while True:
         try:
@@ -105,6 +107,7 @@ def main():
             cur = {s["mac"]: s for s in sta}
             for mac, s in cur.items():
                 if mac not in seen:
+                    joined += 1
                     event(f"+ 連上 {label(s)} 訊號 {s.get('signal')}")
                 p = problems(s)
                 if p and not bad.get(mac):
@@ -113,6 +116,7 @@ def main():
                     event(f"✓ {label(s)} 恢復(訊號 {s.get('signal')} 滿意度 {s.get('satisfaction')})")
                 bad[mac] = bool(p)
             for mac in set(seen) - set(cur):
+                left += 1
                 event(f"- 離開 {label(seen[mac])}")
                 bad.pop(mac, None)
             seen = cur
@@ -125,12 +129,14 @@ def main():
                                                        "tx_bytes-r", "rx_bytes-r", "uptime", "ip")} for s in sta]}
             with open(os.path.join(LOGDIR, f"ap{AP}-{now():%Y-%m-%d}.jsonl"), "a") as f:
                 f.write(json.dumps(snap, ensure_ascii=False, separators=(",", ":")) + "\n")
-            if time.time() - last_summary >= 900:
-                nb = sum(1 for v in bad.values() if v)
+            if time.time() - last_summary >= SUMMARY_EVERY:
+                issues = [f"{label(s)} " + "、".join(problems(s)) for s in cur.values() if problems(s)]
                 rs = " ".join(f"{rn} ch{x.get('channel')} 空中{x.get('cu_total')}% 重送{x.get('tx_retries_pct')}%"
                               for rn, x in radios.items())
-                event(f"摘要:{len(cur)} 台裝置,{nb} 台有狀況 | {rs}")
+                event(f"摘要:{len(cur)} 台裝置(+{joined}/-{left}),{len(issues)} 台有狀況 | {rs}"
+                      + ("".join(f"\n    ⚠ {i}" for i in issues)))
                 last_summary = time.time()
+                joined = left = 0
         except Exception as e:   # 網路或 controller 暫時性錯誤:記一筆、下輪再試
             event(f"讀取失敗:{type(e).__name__} {str(e)[:80]}")
             try:
